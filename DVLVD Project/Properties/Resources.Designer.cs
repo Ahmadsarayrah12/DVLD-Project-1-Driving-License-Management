@@ -73,6 +73,26 @@ namespace DVLVD_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Female_Avatar1 {
+            get {
+                object obj = ResourceManager.GetObject("Female_Avatar1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Male_Avatar {
+            get {
+                object obj = ResourceManager.GetObject("Male_Avatar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Pictuer {
             get {
                 object obj = ResourceManager.GetObject("Pictuer", resourceCulture);

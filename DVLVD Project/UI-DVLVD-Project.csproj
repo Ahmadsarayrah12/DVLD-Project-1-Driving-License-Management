@@ -104,5 +104,11 @@
   <ItemGroup>
     <None Include="Resources\Pictuer.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Male_Avatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Female_Avatar1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
