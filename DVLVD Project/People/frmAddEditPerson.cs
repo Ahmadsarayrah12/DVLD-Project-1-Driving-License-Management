@@ -313,17 +313,20 @@ namespace DVLVD_Project
 
         }
 
-        private void btnResetAndAddNew_Click(object sender, EventArgs e)
+                private void btnResetAndAddNew_Click(object sender, EventArgs e)
         {
-        // هذه الدالة تم برمجتها ببساطة لتتحقق من حالة الشاشة (إضافة أم تعديل)
-        // إذا كان تعديل: نعيد جلب البيانات الأصلية من قاعدة البيانات ليتم مسح أي تعديل خاطئ
-        // إذا كان إضافة: نقوم بتفريغ جميع الحقول وتجهيزها لشخص جديد
             if (MessageBox.Show("Are you sure you want to reset the form?", "Confirm Reset", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
             {
                 return;
             }
 
             if (_Mode == enMode.Update)
+            {
+                _LoadData();
+                errorProvider1.Clear();
+                tbNationalNumber.Focus();
+            }
+            else
             {
                 lblPersonID.Text = "N/A";
                 tbNationalNumber.Text = string.Empty;
@@ -351,6 +354,7 @@ namespace DVLVD_Project
         }
     }
 }
+
 
 
 

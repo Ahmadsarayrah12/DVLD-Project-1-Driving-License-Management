@@ -11,7 +11,12 @@ namespace DVLVD_Project
             clsModernUI.ApplyModernTitleBar(this);
             ctrlPersonCard1.LoadPersonInfo(PersonID);
         }
-}
+
+        private void btnAddPerson_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+    }
 }
 
 
