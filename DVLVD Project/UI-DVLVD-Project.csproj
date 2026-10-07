@@ -110,5 +110,11 @@
   <ItemGroup>
     <None Include="Resources\Female_Avatar1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LibraryProject.BussinessLogic\LibraryProject.BussinessLogic.csproj">
+      <Project>{ba1e4468-443c-48aa-86db-e7a2baf66d29}</Project>
+      <Name>LibraryProject.BussinessLogic</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
