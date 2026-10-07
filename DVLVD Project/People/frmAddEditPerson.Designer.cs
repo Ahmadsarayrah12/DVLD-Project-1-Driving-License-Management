@@ -1,4 +1,4 @@
-﻿namespace DVLVD_Project
+namespace DVLVD_Project
 {
     partial class frmAddEditPerson
     {
@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddEditPerson));
-            this.lblAddUpdatePerson = new System.Windows.Forms.Label();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lblPersonID = new System.Windows.Forms.Label();
             this.tbNationalNumber = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.pbAvatar = new System.Windows.Forms.PictureBox();
+            this.pbPersonImage = new System.Windows.Forms.PictureBox();
             this.pbAddUpdateImage = new System.Windows.Forms.PictureBox();
             this.tbFirstName = new System.Windows.Forms.TextBox();
             this.tbSecondName = new System.Windows.Forms.TextBox();
@@ -62,23 +62,22 @@
             this.btnSetImage = new System.Windows.Forms.Button();
             this.RemoveImage = new System.Windows.Forms.Button();
             this.btnSavePerson = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
+this.btnResetAndAddNew = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPersonImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAddUpdateImage)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblAddUpdatePerson
+            // lblTitle
             // 
-            this.lblAddUpdatePerson.AutoSize = true;
-            this.lblAddUpdatePerson.Font = new System.Drawing.Font("Segoe UI Semibold", 22F, System.Drawing.FontStyle.Bold);
-            this.lblAddUpdatePerson.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblAddUpdatePerson.Location = new System.Drawing.Point(375, 20);
-            this.lblAddUpdatePerson.Name = "lblAddUpdatePerson";
-            this.lblAddUpdatePerson.Size = new System.Drawing.Size(285, 41);
-            this.lblAddUpdatePerson.TabIndex = 11;
-            this.lblAddUpdatePerson.Text = "Add/Update Screen";
-            this.lblAddUpdatePerson.Click += new System.EventHandler(this.lblAddUpdatePerson_Click);
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 22F, System.Drawing.FontStyle.Bold);
+            this.lblTitle.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lblTitle.Location = new System.Drawing.Point(375, 20);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(285, 41);
+            this.lblTitle.TabIndex = 11;
+            this.lblTitle.Text = "Add/Update Screen";
             // 
             // label5
             // 
@@ -103,7 +102,6 @@
             this.lblPersonID.Size = new System.Drawing.Size(45, 25);
             this.lblPersonID.TabIndex = 12;
             this.lblPersonID.Text = "N/A";
-            this.lblPersonID.Click += new System.EventHandler(this.lblPersonID_Click);
             // 
             // tbNationalNumber
             // 
@@ -112,8 +110,7 @@
             this.tbNationalNumber.Name = "tbNationalNumber";
             this.tbNationalNumber.Size = new System.Drawing.Size(165, 29);
             this.tbNationalNumber.TabIndex = 5;
-            this.tbNationalNumber.TextChanged += new System.EventHandler(this.tbNationalNumber_TextChanged);
-            this.tbNationalNumber.Validating += new System.ComponentModel.CancelEventHandler(this.tbLastName_Validating);
+            this.tbNationalNumber.Validating += new System.ComponentModel.CancelEventHandler(this.tbNationalNumber_Validating);
             // 
             // label6
             // 
@@ -128,17 +125,16 @@
             this.label6.TabIndex = 14;
             this.label6.Text = "     National No: ";
             // 
-            // pbAvatar
+            // pbPersonImage
             // 
-            this.pbAvatar.BackColor = System.Drawing.Color.Transparent;
-            this.pbAvatar.Image = global::DVLVD_Project.Properties.Resources.Male_Avatar;
-            this.pbAvatar.Location = new System.Drawing.Point(745, 175);
-            this.pbAvatar.Name = "pbAvatar";
-            this.pbAvatar.Size = new System.Drawing.Size(265, 275);
-            this.pbAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbAvatar.TabIndex = 10;
-            this.pbAvatar.TabStop = false;
-            this.pbAvatar.Click += new System.EventHandler(this.pbAvatar_Click);
+            this.pbPersonImage.BackColor = System.Drawing.Color.Transparent;
+            this.pbPersonImage.Image = global::DVLVD_Project.Properties.Resources.Male_Avatar;
+            this.pbPersonImage.Location = new System.Drawing.Point(745, 175);
+            this.pbPersonImage.Name = "pbPersonImage";
+            this.pbPersonImage.Size = new System.Drawing.Size(265, 275);
+            this.pbPersonImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbPersonImage.TabIndex = 10;
+            this.pbPersonImage.TabStop = false;
             // 
             // pbAddUpdateImage
             // 
@@ -160,7 +156,6 @@
             this.tbFirstName.Name = "tbFirstName";
             this.tbFirstName.Size = new System.Drawing.Size(145, 29);
             this.tbFirstName.TabIndex = 1;
-            this.tbFirstName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.tbFirstName.Validating += new System.ComponentModel.CancelEventHandler(this.tbLastName_Validating);
             // 
             // tbSecondName
@@ -170,7 +165,6 @@
             this.tbSecondName.Name = "tbSecondName";
             this.tbSecondName.Size = new System.Drawing.Size(145, 29);
             this.tbSecondName.TabIndex = 2;
-            this.tbSecondName.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             this.tbSecondName.Validating += new System.ComponentModel.CancelEventHandler(this.tbLastName_Validating);
             // 
             // tbThirdName
@@ -180,7 +174,6 @@
             this.tbThirdName.Name = "tbThirdName";
             this.tbThirdName.Size = new System.Drawing.Size(145, 29);
             this.tbThirdName.TabIndex = 3;
-            this.tbThirdName.Validating += new System.ComponentModel.CancelEventHandler(this.tbLastName_Validating);
             // 
             // tbLastName
             // 
@@ -189,7 +182,6 @@
             this.tbLastName.Name = "tbLastName";
             this.tbLastName.Size = new System.Drawing.Size(145, 29);
             this.tbLastName.TabIndex = 4;
-            this.tbLastName.TextChanged += new System.EventHandler(this.tbLastName_TextChanged);
             this.tbLastName.Validating += new System.ComponentModel.CancelEventHandler(this.tbLastName_Validating);
             // 
             // label1
@@ -258,8 +250,7 @@
             this.dtpDateOfBirth.Name = "dtpDateOfBirth";
             this.dtpDateOfBirth.Size = new System.Drawing.Size(170, 27);
             this.dtpDateOfBirth.TabIndex = 6;
-            this.dtpDateOfBirth.ValueChanged += new System.EventHandler(this.dtpDateOfBirth_ValueChanged);
-            this.dtpDateOfBirth.Validating += new System.ComponentModel.CancelEventHandler(this.dtpDateOfBirth_Validating);
+            
             // 
             // label8
             // 
@@ -277,14 +268,12 @@
             // rbMale
             // 
             this.rbMale.AutoSize = true;
-            this.rbMale.Checked = true;
             this.rbMale.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.rbMale.ForeColor = System.Drawing.Color.White;
             this.rbMale.Location = new System.Drawing.Point(5, 4);
             this.rbMale.Name = "rbMale";
             this.rbMale.Size = new System.Drawing.Size(64, 25);
             this.rbMale.TabIndex = 0;
-            this.rbMale.TabStop = true;
             this.rbMale.Text = "Male";
             this.rbMale.UseVisualStyleBackColor = true;
             this.rbMale.CheckedChanged += new System.EventHandler(this.rbMale_CheckedChanged_1);
@@ -292,12 +281,14 @@
             // rbFemale
             // 
             this.rbFemale.AutoSize = true;
+            this.rbFemale.Checked = true;
             this.rbFemale.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.rbFemale.ForeColor = System.Drawing.Color.White;
             this.rbFemale.Location = new System.Drawing.Point(85, 4);
             this.rbFemale.Name = "rbFemale";
             this.rbFemale.Size = new System.Drawing.Size(80, 25);
             this.rbFemale.TabIndex = 1;
+            this.rbFemale.TabStop = true;
             this.rbFemale.Text = "Female";
             this.rbFemale.UseVisualStyleBackColor = true;
             this.rbFemale.CheckedChanged += new System.EventHandler(this.rbFemale_CheckedChanged);
@@ -332,7 +323,6 @@
             this.tbPhone.Name = "tbPhone";
             this.tbPhone.Size = new System.Drawing.Size(170, 29);
             this.tbPhone.TabIndex = 7;
-            this.tbPhone.TextChanged += new System.EventHandler(this.tbPhone_TextChanged);
             this.tbPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbPhone_KeyPress);
             // 
             // btnAddPerson
@@ -459,28 +449,29 @@
             this.btnSavePerson.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSavePerson.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnSavePerson.ForeColor = System.Drawing.Color.White;
-            this.btnSavePerson.Location = new System.Drawing.Point(500, 570);
+            this.btnSavePerson.Location = new System.Drawing.Point(505, 565);
             this.btnSavePerson.Name = "btnSavePerson";
             this.btnSavePerson.Size = new System.Drawing.Size(140, 42);
             this.btnSavePerson.TabIndex = 11;
             this.btnSavePerson.Text = "Save";
             this.btnSavePerson.UseVisualStyleBackColor = false;
+            this.btnSavePerson.Click += new System.EventHandler(this.btnSavePerson_Click);// 
+            // btnResetAndAddNew
             // 
-            // btnCancel
-            // 
-            this.btnCancel.BackColor = System.Drawing.Color.Crimson;
-            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancel.FlatAppearance.BorderSize = 0;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(340, 570);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(140, 42);
-            this.btnCancel.TabIndex = 34;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            this.btnResetAndAddNew.BackColor = System.Drawing.Color.Transparent;
+            this.btnResetAndAddNew.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnResetAndAddNew.BackgroundImage")));
+            this.btnResetAndAddNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnResetAndAddNew.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnResetAndAddNew.FlatAppearance.BorderSize = 0;
+            this.btnResetAndAddNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResetAndAddNew.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btnResetAndAddNew.ForeColor = System.Drawing.Color.White;
+            this.btnResetAndAddNew.Location = new System.Drawing.Point(691, 560);
+            this.btnResetAndAddNew.Name = "btnResetAndAddNew";
+            this.btnResetAndAddNew.Size = new System.Drawing.Size(83, 52);
+            this.btnResetAndAddNew.TabIndex = 35;
+            this.btnResetAndAddNew.UseVisualStyleBackColor = false;
+            this.btnResetAndAddNew.Click += new System.EventHandler(this.btnResetAndAddNew_Click);
             // 
             // frmAddEditPerson
             // 
@@ -489,9 +480,8 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(22)))), ((int)(((byte)(44)))));
             this.ClientSize = new System.Drawing.Size(1044, 650);
-            this.ControlBox = false;
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnSavePerson);
+this.Controls.Add(this.btnSavePerson);
+            this.Controls.Add(this.btnResetAndAddNew);
             this.Controls.Add(this.RemoveImage);
             this.Controls.Add(this.btnSetImage);
             this.Controls.Add(this.tbAddress);
@@ -510,7 +500,7 @@
             this.Controls.Add(this.tbNationalNumber);
             this.Controls.Add(this.lblPersonID);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.pbAvatar);
+            this.Controls.Add(this.pbPersonImage);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -519,7 +509,7 @@
             this.Controls.Add(this.tbThirdName);
             this.Controls.Add(this.tbSecondName);
             this.Controls.Add(this.tbFirstName);
-            this.Controls.Add(this.lblAddUpdatePerson);
+            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.pbAddUpdateImage);
             this.Controls.Add(this.panel1);
             this.MaximizeBox = false;
@@ -530,7 +520,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add /Update Form";
             this.Load += new System.EventHandler(this.frmAddEditPerson_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPersonImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAddUpdateImage)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -542,8 +532,8 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pbAddUpdateImage;
-        private System.Windows.Forms.Label lblAddUpdatePerson;
-        private System.Windows.Forms.PictureBox pbAvatar;
+        private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.PictureBox pbPersonImage;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblPersonID;
         private System.Windows.Forms.TextBox tbNationalNumber;
@@ -574,6 +564,7 @@
         private System.Windows.Forms.Button btnSetImage;
         private System.Windows.Forms.Button RemoveImage;
         private System.Windows.Forms.Button btnSavePerson;
-        private System.Windows.Forms.Button btnCancel;
+private System.Windows.Forms.Button btnResetAndAddNew;
     }
 }
+

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +15,7 @@ namespace DVLVD_Project
         public frmMain()
         {
             InitializeComponent();
+            clsModernUI.ApplyModernTitleBar(this);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -33,9 +34,13 @@ namespace DVLVD_Project
 
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void btnAddPerson_Click(object sender, EventArgs e)
         {
             this.Close();
         }
     }
 }
+
+
+
+
