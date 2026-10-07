@@ -90,7 +90,8 @@ namespace DVLVD_Project
 
         public frmAddEditPerson(int Person)
         {
-            InitializeComponent( );
+            InitializeComponent();
+            clsModernUI.ApplyModernTitleBar(this);
             _Mode = enMode.Update;
             _PersonID = Person;
         }
@@ -350,6 +351,7 @@ namespace DVLVD_Project
         }
     }
 }
+
 
 
 

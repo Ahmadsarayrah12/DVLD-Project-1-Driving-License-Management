@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
@@ -121,7 +121,7 @@ namespace DVLVD_Project
 
         private void TsmiAdd_Click(object sender, EventArgs e)
         {
-            frmAddEditPerson frm = new frmAddEditPerson(-1);
+            frmAddEditPerson frm = new frmAddEditPerson();
             frm.ShowDialog();
             _RefreshPeopleList();
         }
@@ -156,6 +156,16 @@ namespace DVLVD_Project
                     }
                 }
             }
+        }
+
+                private void sendEmailToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("هذه الميزة ستتوفر قريباً (Coming Soon!)", "Coming Soon", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void phoneCallToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("هذه الميزة ستتوفر قريباً (Coming Soon!)", "Coming Soon", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void frmManagePeople_Load(object sender, EventArgs e)
@@ -258,6 +268,7 @@ private void button1_Click_1(object sender, EventArgs e)
         }
     }
 }
+
 
 
 

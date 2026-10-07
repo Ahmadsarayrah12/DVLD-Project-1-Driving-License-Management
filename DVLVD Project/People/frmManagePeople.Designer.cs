@@ -1,4 +1,4 @@
-namespace DVLVD_Project
+﻿namespace DVLVD_Project
 {
     partial class frmManagePeople
     {
@@ -322,4 +322,5 @@ private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ToolStripMenuItem phoneCallToolStripMenuItem;
     }
 }
+
 
