@@ -293,7 +293,7 @@ namespace DVLVD_Project
             _Person.SecondName = tbSecondName.Text.Trim();
             _Person.ThirdName = tbThirdName.Text.Trim();
             _Person.LastName = tbLastName.Text.Trim();
-            _Person.DateOfBirth = dtpDateOfBirth.Value;
+            _Person.DateOfBirth = dtpDateOfBirth.Value.Date;
             _Person.Address = tbAddress.Text.Trim();
             _Person.Phone = tbPhone.Text.Trim();
             _Person.Email = tbEmail.Text.Trim();
@@ -346,7 +346,7 @@ namespace DVLVD_Project
                 tbEmail.Text = string.Empty;
                 tbAddress.Text = string.Empty;
                 
-                dtpDateOfBirth.Value = DateTime.Now.AddYears(-18);
+                dtpDateOfBirth.Value = DateTime.Now.AddYears(-18).Date;
                 
                 rbMale.Checked = true;
                 
@@ -354,7 +354,7 @@ namespace DVLVD_Project
                 _ResetDefaultAvatar();
                 
                 _IsSaved = false;
-                btnSavePerson.Enabled = false;
+                btnSavePerson.Enabled = true;
 
                 errorProvider1.Clear();
                 tbNationalNumber.Focus();
@@ -362,6 +362,8 @@ namespace DVLVD_Project
         }
     }
 }
+
+
 
 
 

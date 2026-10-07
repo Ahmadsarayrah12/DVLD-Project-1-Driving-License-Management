@@ -62,7 +62,7 @@ namespace DVLVD_Project
             this.btnSetImage = new System.Windows.Forms.Button();
             this.RemoveImage = new System.Windows.Forms.Button();
             this.btnSavePerson = new System.Windows.Forms.Button();
-this.btnResetAndAddNew = new System.Windows.Forms.Button();
+            this.btnResetAndAddNew = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbPersonImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAddUpdateImage)).BeginInit();
             this.panel1.SuspendLayout();
@@ -250,7 +250,6 @@ this.btnResetAndAddNew = new System.Windows.Forms.Button();
             this.dtpDateOfBirth.Name = "dtpDateOfBirth";
             this.dtpDateOfBirth.Size = new System.Drawing.Size(170, 27);
             this.dtpDateOfBirth.TabIndex = 6;
-            
             // 
             // label8
             // 
@@ -449,13 +448,14 @@ this.btnResetAndAddNew = new System.Windows.Forms.Button();
             this.btnSavePerson.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSavePerson.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnSavePerson.ForeColor = System.Drawing.Color.White;
-            this.btnSavePerson.Location = new System.Drawing.Point(505, 565);
+            this.btnSavePerson.Location = new System.Drawing.Point(254, 560);
             this.btnSavePerson.Name = "btnSavePerson";
-            this.btnSavePerson.Size = new System.Drawing.Size(140, 42);
+            this.btnSavePerson.Size = new System.Drawing.Size(310, 42);
             this.btnSavePerson.TabIndex = 11;
             this.btnSavePerson.Text = "Save";
             this.btnSavePerson.UseVisualStyleBackColor = false;
-            this.btnSavePerson.Click += new System.EventHandler(this.btnSavePerson_Click);// 
+            this.btnSavePerson.Click += new System.EventHandler(this.btnSavePerson_Click);
+            // 
             // btnResetAndAddNew
             // 
             this.btnResetAndAddNew.BackColor = System.Drawing.Color.Transparent;
@@ -466,7 +466,7 @@ this.btnResetAndAddNew = new System.Windows.Forms.Button();
             this.btnResetAndAddNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnResetAndAddNew.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnResetAndAddNew.ForeColor = System.Drawing.Color.White;
-            this.btnResetAndAddNew.Location = new System.Drawing.Point(691, 560);
+            this.btnResetAndAddNew.Location = new System.Drawing.Point(570, 555);
             this.btnResetAndAddNew.Name = "btnResetAndAddNew";
             this.btnResetAndAddNew.Size = new System.Drawing.Size(83, 52);
             this.btnResetAndAddNew.TabIndex = 35;
@@ -480,7 +480,7 @@ this.btnResetAndAddNew = new System.Windows.Forms.Button();
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(22)))), ((int)(((byte)(44)))));
             this.ClientSize = new System.Drawing.Size(1044, 650);
-this.Controls.Add(this.btnSavePerson);
+            this.Controls.Add(this.btnSavePerson);
             this.Controls.Add(this.btnResetAndAddNew);
             this.Controls.Add(this.RemoveImage);
             this.Controls.Add(this.btnSetImage);

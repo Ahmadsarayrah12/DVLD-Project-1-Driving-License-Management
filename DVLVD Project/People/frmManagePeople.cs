@@ -64,6 +64,7 @@ namespace DVLVD_Project
                     dataGridView1.Columns["DateOfBirth"].HeaderText = "Date Of Birth";
                     dataGridView1.Columns["DateOfBirth"].Width = 140;
                     dataGridView1.Columns["DateOfBirth"].DisplayIndex = 3;
+                    dataGridView1.Columns["DateOfBirth"].DefaultCellStyle.Format = "dd/MM/yyyy";
                 }
 
                 if (dataGridView1.Columns.Contains("GenderText"))
@@ -268,6 +269,8 @@ private void button1_Click_1(object sender, EventArgs e)
         }
     }
 }
+
+
 
 
 
