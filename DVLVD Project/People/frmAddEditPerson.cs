@@ -17,16 +17,9 @@ namespace DVLVD_Project
         private clsPerson _Person;
         private bool _IsSaved = false;
 
-        private void ValidateFields(object sender, EventArgs e)
+                private void Input_Changed(object sender, EventArgs e)
         {
-            if (_IsSaved) return;
-
-            btnSavePerson.Enabled = !string.IsNullOrWhiteSpace(tbNationalNumber.Text) &&
-                                    !string.IsNullOrWhiteSpace(tbFirstName.Text) &&
-                                    !string.IsNullOrWhiteSpace(tbSecondName.Text) &&
-                                    !string.IsNullOrWhiteSpace(tbLastName.Text) &&
-                                    !string.IsNullOrWhiteSpace(tbPhone.Text) &&
-                                    !string.IsNullOrWhiteSpace(tbAddress.Text);
+            btnSavePerson.Enabled = true;
         }
 
         public frmAddEditPerson()
@@ -122,7 +115,8 @@ namespace DVLVD_Project
                     pbPersonImage.SizeMode = PictureBoxSizeMode.Zoom;
                     pbPersonImage.ImageLocation = openFileDialog.FileName;
                     RemoveImage.Visible = true;
-                }
+                btnSavePerson.Enabled = true;
+            }
             }
         }
 
@@ -140,6 +134,19 @@ namespace DVLVD_Project
             }
             _FillCountriesInComboBox();
             FormSetting();
+            tbNationalNumber.TextChanged += Input_Changed;
+            tbFirstName.TextChanged += Input_Changed;
+            tbSecondName.TextChanged += Input_Changed;
+            tbThirdName.TextChanged += Input_Changed;
+            tbLastName.TextChanged += Input_Changed;
+            tbPhone.TextChanged += Input_Changed;
+            tbEmail.TextChanged += Input_Changed;
+            tbAddress.TextChanged += Input_Changed;
+            dtpDateOfBirth.ValueChanged += Input_Changed;
+            cbCountry.SelectedIndexChanged += Input_Changed;
+            rbMale.CheckedChanged += Input_Changed;
+            rbFemale.CheckedChanged += Input_Changed;
+
             tbNationalNumber.Focus();
         }
 
@@ -176,6 +183,7 @@ namespace DVLVD_Project
         {
             pbPersonImage.ImageLocation = null;
             _ResetDefaultAvatar();
+            btnSavePerson.Enabled = true;
         }
 
         private void btnAddPerson_Click(object sender, EventArgs e)
@@ -354,6 +362,9 @@ namespace DVLVD_Project
         }
     }
 }
+
+
+
 
 
 
