@@ -17,7 +17,9 @@ namespace DVLVD_Project
         private clsPerson _Person;
         private bool _IsSaved = false;
 
-                private void Input_Changed(object sender, EventArgs e)
+               
+        
+        private void Input_Changed(object sender, EventArgs e)
         {
             btnSavePerson.Enabled = true;
         }

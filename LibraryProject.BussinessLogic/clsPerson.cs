@@ -8,7 +8,7 @@ namespace LibraryProject.BussinessLogic
         public enum enMode { AddNew = 0, Update = 1 }
         public enum enGender { Male = 0, Female = 1 }
 
-        public enMode Mode { get; private set; } = enMode.AddNew;
+        public enMode Mode { get; private set; }=enMode.AddNew;
 
         public int PersonID { get; private set; }
         public string NationalNo { get; set; }
