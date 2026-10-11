@@ -47,7 +47,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.txtFilter = new System.Windows.Forms.TextBox();
             this.lblFilterBy = new System.Windows.Forms.Label();
-this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnAddPerson = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -61,7 +61,7 @@ this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 26F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(460, 24);
+            this.label1.Location = new System.Drawing.Point(654, 13);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(276, 47);
             this.label1.TabIndex = 0;
@@ -100,7 +100,7 @@ this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1034, 375);
+            this.dataGridView1.Size = new System.Drawing.Size(1347, 375);
             this.dataGridView1.TabIndex = 1;
             // 
             // contextMenuStrip1
@@ -117,26 +117,26 @@ this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.sendEmailToolStripMenuItem,
             this.phoneCallToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 230);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(171, 196);
             // 
             // showDetailsToolStripMenuItem
             // 
             this.showDetailsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("showDetailsToolStripMenuItem.Image")));
             this.showDetailsToolStripMenuItem.Name = "showDetailsToolStripMenuItem";
-            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(210, 30);
+            this.showDetailsToolStripMenuItem.Size = new System.Drawing.Size(170, 30);
             this.showDetailsToolStripMenuItem.Text = "Show Details";
             this.showDetailsToolStripMenuItem.Click += new System.EventHandler(this.TsmiDetails_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(207, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(167, 6);
             // 
             // addNewPersonToolStripMenuItem
             // 
             this.addNewPersonToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("addNewPersonToolStripMenuItem.Image")));
             this.addNewPersonToolStripMenuItem.Name = "addNewPersonToolStripMenuItem";
-            this.addNewPersonToolStripMenuItem.Size = new System.Drawing.Size(210, 30);
+            this.addNewPersonToolStripMenuItem.Size = new System.Drawing.Size(170, 30);
             this.addNewPersonToolStripMenuItem.Text = "Add New Person";
             this.addNewPersonToolStripMenuItem.Click += new System.EventHandler(this.TsmiAdd_Click);
             // 
@@ -144,7 +144,7 @@ this.pictureBox2 = new System.Windows.Forms.PictureBox();
             // 
             this.editToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("editToolStripMenuItem.Image")));
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(210, 30);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(170, 30);
             this.editToolStripMenuItem.Text = "Edit";
             this.editToolStripMenuItem.Click += new System.EventHandler(this.TsmiEdit_Click);
             // 
@@ -152,28 +152,30 @@ this.pictureBox2 = new System.Windows.Forms.PictureBox();
             // 
             this.deleteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("deleteToolStripMenuItem.Image")));
             this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(210, 30);
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(170, 30);
             this.deleteToolStripMenuItem.Text = "Delete";
             this.deleteToolStripMenuItem.Click += new System.EventHandler(this.TsmiDelete_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(207, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(167, 6);
             // 
             // sendEmailToolStripMenuItem
             // 
             this.sendEmailToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sendEmailToolStripMenuItem.Image")));
             this.sendEmailToolStripMenuItem.Name = "sendEmailToolStripMenuItem";
-            this.sendEmailToolStripMenuItem.Size = new System.Drawing.Size(210, 30);
+            this.sendEmailToolStripMenuItem.Size = new System.Drawing.Size(170, 30);
             this.sendEmailToolStripMenuItem.Text = "Send Email";
+            this.sendEmailToolStripMenuItem.Click += new System.EventHandler(this.sendEmailToolStripMenuItem_Click_1);
             // 
             // phoneCallToolStripMenuItem
             // 
             this.phoneCallToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("phoneCallToolStripMenuItem.Image")));
             this.phoneCallToolStripMenuItem.Name = "phoneCallToolStripMenuItem";
-            this.phoneCallToolStripMenuItem.Size = new System.Drawing.Size(210, 30);
+            this.phoneCallToolStripMenuItem.Size = new System.Drawing.Size(170, 30);
             this.phoneCallToolStripMenuItem.Text = "Phone Call";
+            this.phoneCallToolStripMenuItem.Click += new System.EventHandler(this.phoneCallToolStripMenuItem_Click_1);
             // 
             // LblPeopleCount
             // 
@@ -213,7 +215,7 @@ this.pictureBox2 = new System.Windows.Forms.PictureBox();
             // 
             this.txtFilter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFilter.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtFilter.Location = new System.Drawing.Point(350, 142);
+            this.txtFilter.Location = new System.Drawing.Point(452, 142);
             this.txtFilter.Name = "txtFilter";
             this.txtFilter.Size = new System.Drawing.Size(532, 25);
             this.txtFilter.TabIndex = 9;
@@ -229,12 +231,13 @@ this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblFilterBy.Name = "lblFilterBy";
             this.lblFilterBy.Size = new System.Drawing.Size(69, 20);
             this.lblFilterBy.TabIndex = 8;
-            this.lblFilterBy.Text = "Filter By:";// 
+            this.lblFilterBy.Text = "Filter By:";
+            // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(395, 20);
+            this.pictureBox2.Location = new System.Drawing.Point(589, 9);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(60, 56);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -247,12 +250,12 @@ this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnAddPerson.FlatAppearance.BorderSize = 0;
             this.btnAddPerson.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddPerson.Image = ((System.Drawing.Image)(resources.GetObject("btnAddPerson.Image")));
-            this.btnAddPerson.Location = new System.Drawing.Point(1036, 129);
+            this.btnAddPerson.Location = new System.Drawing.Point(1349, 119);
             this.btnAddPerson.Name = "btnAddPerson";
             this.btnAddPerson.Size = new System.Drawing.Size(52, 48);
             this.btnAddPerson.TabIndex = 3;
             this.btnAddPerson.UseVisualStyleBackColor = true;
-            this.btnAddPerson.Click += new System.EventHandler(this.button1_Click);
+            this.btnAddPerson.Click += new System.EventHandler(this.AddPerson_Click);
             // 
             // button1
             // 
@@ -260,7 +263,7 @@ this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(1049, 12);
+            this.button1.Location = new System.Drawing.Point(1376, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(52, 48);
             this.button1.TabIndex = 24;
@@ -272,9 +275,9 @@ this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(22)))), ((int)(((byte)(44)))));
-this.ClientSize = new System.Drawing.Size(1136, 630);
+            this.ClientSize = new System.Drawing.Size(1440, 630);
             this.Controls.Add(this.button1);
-this.Controls.Add(this.txtFilter);
+            this.Controls.Add(this.txtFilter);
             this.Controls.Add(this.lblFilterBy);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.pictureBox2);

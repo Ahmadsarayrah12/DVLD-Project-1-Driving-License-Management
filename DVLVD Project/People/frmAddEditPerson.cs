@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Data;
 using System.Windows.Forms;
 using LibraryProject.BussinessLogic;
 using System.Data.SqlClient;
@@ -21,7 +22,9 @@ namespace DVLVD_Project
         
         private void Input_Changed(object sender, EventArgs e)
         {
+
             btnSavePerson.Enabled = true;
+
         }
 
         public frmAddEditPerson()
@@ -45,9 +48,9 @@ namespace DVLVD_Project
             lblPersonID.Text = _Person.PersonID.ToString();
             tbNationalNumber.Text = _Person.NationalNo;
             tbFirstName.Text = _Person.FirstName;
-            tbSecondName.Text = _Person.SecondName;
+            tbSecondName.Text= _Person.SecondName;
             tbThirdName.Text = _Person.ThirdName;
-            tbLastName.Text = _Person.LastName;
+            tbLastName.Text  = _Person.LastName;
             tbPhone.Text = _Person.Phone;
             tbEmail.Text = _Person.Email;
             tbAddress.Text = _Person.Address;
@@ -112,13 +115,15 @@ namespace DVLVD_Project
                 openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.bmp;*.gif|All files (*.*)|*.*";
                 openFileDialog.Title = "Choose a profile picture or a system image.";
 
+               
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     pbPersonImage.SizeMode = PictureBoxSizeMode.Zoom;
                     pbPersonImage.ImageLocation = openFileDialog.FileName;
                     RemoveImage.Visible = true;
-                btnSavePerson.Enabled = true;
-            }
+                    btnSavePerson.Enabled = true;
+            
+                }
             }
         }
 
@@ -242,11 +247,13 @@ namespace DVLVD_Project
         }
         private void _FillCountriesInComboBox()
         {
-            System.Data.DataTable dtCountries = clsCountry.GetAllCountries();
+     
+            DataTable dtCountries = clsCountry.GetAllCountries();
             cbCountry.DataSource = dtCountries;
             cbCountry.DisplayMember = "CountryName";
             cbCountry.ValueMember = "CountryID";
-            
+
+             
             int jordanIndex = cbCountry.FindString("Jordan");
             if (jordanIndex >= 0)
                 cbCountry.SelectedIndex = jordanIndex;
@@ -323,7 +330,8 @@ namespace DVLVD_Project
 
         }
 
-                private void btnResetAndAddNew_Click(object sender, EventArgs e)
+              
+        private void btnResetAndAddNew_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Are you sure you want to reset the form?", "Confirm Reset", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
             {
@@ -360,6 +368,25 @@ namespace DVLVD_Project
 
                 errorProvider1.Clear();
                 tbNationalNumber.Focus();
+            }
+        }
+
+       
+        private void dtpDateOfBirth_Validating(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if ((DateTime.Now.Year - dtpDateOfBirth.Value.Year ) < 18)
+            {
+                e.Cancel = true;
+                System.Media.SystemSounds.Beep.Play();
+                errorProvider1.SetError(tbPhone, "Just over 18 please!");
+                MessageBox.Show("The age must be over 18","Validation Message",MessageBoxButtons.OK,MessageBoxIcon.Information);
+
+
+
+            }
+            else
+            {
+                errorProvider1.SetError(dtpDateOfBirth, null);
             }
         }
     }

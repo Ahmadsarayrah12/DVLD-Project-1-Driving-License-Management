@@ -250,6 +250,7 @@ namespace DVLVD_Project
             this.dtpDateOfBirth.Name = "dtpDateOfBirth";
             this.dtpDateOfBirth.Size = new System.Drawing.Size(170, 27);
             this.dtpDateOfBirth.TabIndex = 6;
+             this.dtpDateOfBirth.Validating += new System.ComponentModel.CancelEventHandler(this.dtpDateOfBirth_Validating);
             // 
             // label8
             // 

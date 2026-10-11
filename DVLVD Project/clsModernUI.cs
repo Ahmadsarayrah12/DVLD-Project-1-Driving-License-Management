@@ -63,11 +63,11 @@ namespace DVLVD_Project
             topPanel.Controls.Add(lblTitle);
             frm.Controls.Add(topPanel);
 
-            // ÅÖÇÝÉ ÅØÇÑ ÑÝíÚ ÌÏÇð (Border) Íæá ÇáÔÇÔÉ ÈÇááæä ÇáÐåÈí áíÚØí ÔßáÇð ÌãÇáíÇð
-            frm.Paint += (s, e) => 
-            {
-                ControlPaint.DrawBorder(e.Graphics, frm.ClientRectangle, Color.FromArgb(212, 175, 55), ButtonBorderStyle.Solid);
-            };
+            //// ÅÖÇÝÉ ÅØÇÑ ÑÝíÚ ÌÏÇð (Border) Íæá ÇáÔÇÔÉ ÈÇááæä ÇáÐåÈí áíÚØí ÔßáÇð ÌãÇáíÇð
+            //frm.Paint += (s, e) => 
+            //{
+            //    ControlPaint.DrawBorder(e.Graphics, frm.ClientRectangle, Color.FromArgb(212, 175, 55), ButtonBorderStyle.Solid);
+            //};
         }
     }
 }

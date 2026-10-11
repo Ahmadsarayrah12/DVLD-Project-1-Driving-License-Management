@@ -159,15 +159,10 @@ namespace DVLVD_Project
             }
         }
 
-                private void sendEmailToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("هذه الميزة ستتوفر قريباً (Coming Soon!)", "Coming Soon", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
+                
+    
 
-        private void phoneCallToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("هذه الميزة ستتوفر قريباً (Coming Soon!)", "Coming Soon", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
+        
 
         private void frmManagePeople_Load(object sender, EventArgs e)
         {
@@ -182,20 +177,13 @@ namespace DVLVD_Project
         {
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void AddPerson_Click(object sender, EventArgs e)
         {
             frmAddEditPerson frmAddEditPerson = new frmAddEditPerson();
             frmAddEditPerson.ShowDialog();
             _RefreshPeopleList();
         }
-private void button1_Click_1(object sender, EventArgs e)
-        {
-        }
-
-        private void btnFindPerson_Click(object sender, EventArgs e)
-        {
-        }
-
+ 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtFilter.Visible = (comboBox1.Text != "None");
@@ -266,6 +254,18 @@ private void button1_Click_1(object sender, EventArgs e)
         private void button1_Click_2(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void sendEmailToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("هذه الميزة ستتوفر قريباً (Coming Soon!)", "Coming Soon", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void phoneCallToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("هذه الميزة ستتوفر قريباً (Coming Soon!)", "Coming Soon", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        
+    
         }
     }
 }
