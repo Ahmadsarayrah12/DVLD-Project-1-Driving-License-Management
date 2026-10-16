@@ -1,5 +1,6 @@
 using System;
 using System.Windows.Forms;
+using System.Data;
 using LibraryProject.BussinessLogic;
 
 namespace DVLVD_Project.UserControls
@@ -72,8 +73,8 @@ namespace DVLVD_Project.UserControls
             lblDateOfBirth.Text = _Person.DateOfBirth.ToShortDateString();
             
             // Get Country Name
-            System.Data.DataTable dtCountries = clsCountry.GetAllCountries();
-            System.Data.DataRow[] rows = dtCountries.Select("CountryID = " + _Person.NationalityCountryID);
+             DataTable dtCountries = clsCountry.GetAllCountries();
+             DataRow[] rows = dtCountries.Select("CountryID = " + _Person.NationalityCountryID);
             if (rows.Length > 0)
                 lblCountry.Text = rows[0]["CountryName"].ToString();
             else

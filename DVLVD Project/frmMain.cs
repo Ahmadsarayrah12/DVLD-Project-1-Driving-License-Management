@@ -38,6 +38,15 @@ namespace DVLVD_Project
         {
             this.Close();
         }
+
+        private void usersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmManageUser users = new frmManageUser();
+            users.ShowDialog();
+        }
+
+
+
     }
 }
 
