@@ -23,6 +23,10 @@ namespace DVLVD_Project
             this.Close();
         }
 
-        
+        private void btnSaveUser_Click(object sender, EventArgs e)
+        {
+            frmAddEditUser frm = new frmAddEditUser();
+            frm.ShowDialog();
+        }
     }
 }

@@ -34,9 +34,9 @@ namespace DVLVD_Project.UserControls
             this.gbFilter.Controls.Add(this.label1);
             this.gbFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbFilter.ForeColor = System.Drawing.Color.White;
-            this.gbFilter.Location = new System.Drawing.Point(3, 3);
+            this.gbFilter.Location = new System.Drawing.Point(7, 3);
             this.gbFilter.Name = "gbFilter";
-            this.gbFilter.Size = new System.Drawing.Size(834, 80);
+            this.gbFilter.Size = new System.Drawing.Size(840, 80);
             this.gbFilter.TabIndex = 0;
             this.gbFilter.TabStop = false;
             this.gbFilter.Text = "Filter";
@@ -57,7 +57,7 @@ namespace DVLVD_Project.UserControls
             // 
             this.btnFind.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(43)))), ((int)(((byte)(73)))));
             this.btnFind.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFind.Location = new System.Drawing.Point(400, 25);
+            this.btnFind.Location = new System.Drawing.Point(414, 26);
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(100, 35);
             this.btnFind.TabIndex = 3;
@@ -77,8 +77,8 @@ namespace DVLVD_Project.UserControls
             this.cbFilterBy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbFilterBy.FormattingEnabled = true;
             this.cbFilterBy.Items.AddRange(new object[] {
-            "National No.",
-            "Person ID"});
+            "Person ID",
+            "National No."});
             this.cbFilterBy.Location = new System.Drawing.Point(90, 30);
             this.cbFilterBy.Name = "cbFilterBy";
             this.cbFilterBy.Size = new System.Drawing.Size(121, 28);
@@ -91,14 +91,14 @@ namespace DVLVD_Project.UserControls
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
             this.label1.Location = new System.Drawing.Point(10, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 20);
+            this.label1.Size = new System.Drawing.Size(79, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Find By: ";
             // 
             // ctrlPersonCard1
             // 
             this.ctrlPersonCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(22)))), ((int)(((byte)(44)))));
-            this.ctrlPersonCard1.Location = new System.Drawing.Point(3, 90);
+            this.ctrlPersonCard1.Location = new System.Drawing.Point(7, 97);
             this.ctrlPersonCard1.Name = "ctrlPersonCard1";
             this.ctrlPersonCard1.Size = new System.Drawing.Size(840, 300);
             this.ctrlPersonCard1.TabIndex = 1;

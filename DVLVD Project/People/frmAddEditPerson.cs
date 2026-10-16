@@ -14,7 +14,8 @@ namespace DVLVD_Project
         public enum enMode { AddNew=1, Update=2 }
         private enMode _Mode;
 
-        private int _PersonID;
+        public int _PersonID { get; private set; } = -1;
+        
         private clsPerson _Person;
         private bool _IsSaved = false;
 
@@ -317,10 +318,15 @@ namespace DVLVD_Project
 
             if (_Person.Save())
             {
-                MessageBox.Show("Person saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                lblPersonID.Text = _Person.PersonID.ToString();
+                _PersonID = _Person.PersonID;
                 _IsSaved = true;
                 btnSavePerson.Enabled = false;
+                lblPersonID.Text = _Person.PersonID.ToString();
+
+
+                MessageBox.Show("Person saved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.DialogResult = DialogResult.OK;
+                this.Close();
             }
             else
             {
