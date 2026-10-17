@@ -28,6 +28,19 @@ namespace DVLVD_Project.UserControls
             get { return ctrlPersonCard1.SelectedPersonInfo; }
         }
 
+        public bool FilterEnabled
+        {
+            get { return gbFilter.Enabled; }
+            set { gbFilter.Enabled = value; }
+        }
+
+        public void LoadPersonInfo(int personID)
+        {
+            cbFilterBy.SelectedIndex = 0;
+            txtFilterValue.Text = personID.ToString();
+            ctrlPersonCard1.LoadPersonInfo(personID);
+        }
+
         private void ctrlPersonCardWithFilter_Load(object sender, EventArgs e)
         {
             cbFilterBy.SelectedIndex = 0; 

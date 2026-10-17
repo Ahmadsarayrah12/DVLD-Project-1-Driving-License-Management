@@ -95,12 +95,12 @@
             this.dgvPeopleData.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPeopleData.EnableHeadersVisualStyles = false;
             this.dgvPeopleData.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(50)))), ((int)(((byte)(80)))));
-            this.dgvPeopleData.Location = new System.Drawing.Point(54, 183);
+            this.dgvPeopleData.Location = new System.Drawing.Point(42, 183);
             this.dgvPeopleData.Name = "dgvPeopleData";
             this.dgvPeopleData.ReadOnly = true;
             this.dgvPeopleData.RowHeadersVisible = false;
             this.dgvPeopleData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPeopleData.Size = new System.Drawing.Size(1347, 375);
+            this.dgvPeopleData.Size = new System.Drawing.Size(1371, 375);
             this.dgvPeopleData.TabIndex = 1;
             // 
             // contextMenuStrip1
@@ -250,7 +250,7 @@
             this.btnAddPerson.FlatAppearance.BorderSize = 0;
             this.btnAddPerson.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddPerson.Image = ((System.Drawing.Image)(resources.GetObject("btnAddPerson.Image")));
-            this.btnAddPerson.Location = new System.Drawing.Point(1349, 119);
+            this.btnAddPerson.Location = new System.Drawing.Point(1347, 119);
             this.btnAddPerson.Name = "btnAddPerson";
             this.btnAddPerson.Size = new System.Drawing.Size(52, 48);
             this.btnAddPerson.TabIndex = 3;

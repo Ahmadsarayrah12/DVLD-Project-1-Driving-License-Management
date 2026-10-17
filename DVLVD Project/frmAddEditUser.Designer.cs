@@ -1,4 +1,4 @@
-﻿namespace DVLVD_Project
+namespace DVLVD_Project
 {
     partial class frmAddEditUser
     {
@@ -113,6 +113,7 @@
             // ctrlPersonCardWithFilter1
             // 
             this.ctrlPersonCardWithFilter1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(22)))), ((int)(((byte)(44)))));
+            this.ctrlPersonCardWithFilter1.FilterEnabled = true;
             this.ctrlPersonCardWithFilter1.ForeColor = System.Drawing.Color.White;
             this.ctrlPersonCardWithFilter1.Location = new System.Drawing.Point(6, 3);
             this.ctrlPersonCardWithFilter1.Margin = new System.Windows.Forms.Padding(6);
@@ -177,6 +178,7 @@
             // 
             this.textBox3.Location = new System.Drawing.Point(243, 252);
             this.textBox3.Name = "textBox3";
+            this.textBox3.PasswordChar = '*';
             this.textBox3.Size = new System.Drawing.Size(216, 24);
             this.textBox3.TabIndex = 5;
             // 
@@ -194,6 +196,7 @@
             // 
             this.textBox2.Location = new System.Drawing.Point(243, 199);
             this.textBox2.Name = "textBox2";
+            this.textBox2.PasswordChar = '*';
             this.textBox2.Size = new System.Drawing.Size(216, 24);
             this.textBox2.TabIndex = 3;
             // 
@@ -201,6 +204,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 15F);
+            this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(53, 195);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 24);
