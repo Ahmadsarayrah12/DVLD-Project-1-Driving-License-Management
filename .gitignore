@@ -22,3 +22,10 @@ Thumbs.db
 folderico-*.ico
 *.pdf
 
+## Backup & Temporary Files
+*.bak
+!database/*.bak
+*.backup
+*.tmp
+*.temp
+*.log
