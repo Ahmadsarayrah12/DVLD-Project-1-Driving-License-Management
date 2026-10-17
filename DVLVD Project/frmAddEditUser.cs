@@ -87,7 +87,7 @@ namespace DVLVD_Project
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if(ctrlPersonCardWithFilter1.SelectedPersonInfo==null)
+            if(ctrlPersonCardWithFilter1.SelectedPersonInfo ==null)
             {
 
               MessageBox.Show(

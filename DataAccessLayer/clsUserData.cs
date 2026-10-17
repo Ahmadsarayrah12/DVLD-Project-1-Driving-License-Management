@@ -52,7 +52,7 @@ namespace DataAccessLayer
 
                         if(result !=null && int.TryParse(result.ToString(), out int insertedID))
                         {
-                            PersonID = insertedID;
+                            UserID = insertedID;
                         }
 
                     }
