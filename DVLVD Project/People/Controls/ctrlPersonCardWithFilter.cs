@@ -19,8 +19,10 @@ namespace DVLVD_Project.UserControls
         {
             get { return ctrlPersonCard1.PersonID; }
         }
+         
 
- 
+
+
         public clsPerson SelectedPersonInfo
         {
             get { return ctrlPersonCard1.SelectedPersonInfo; }

@@ -8,12 +8,14 @@ namespace DVLVD_Project.UserControls
     public partial class ctrlPersonCard : UserControl
     {
         private int _PersonID = -1;
+
         private clsPerson _Person;
 
         public int PersonID
         {
             get { return _PersonID; }
         }
+        public string FullName {get { return _Person.FullName; } }
 
         public clsPerson SelectedPersonInfo
         {

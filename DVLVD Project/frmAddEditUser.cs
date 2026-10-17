@@ -16,7 +16,10 @@ namespace DVLVD_Project
     {
 
         public int PersnID { get; private set; }
-         
+        public string Name { get; private set; }
+        
+        
+
         public frmAddEditUser()
         {
             InitializeComponent();
@@ -25,8 +28,7 @@ namespace DVLVD_Project
 
         private void frmAddEditUser_Load(object sender, EventArgs e)
         {
-            tcAddUpdateUser.Name = "Personal Info";
-
+             
         }
 
 
@@ -46,7 +48,9 @@ namespace DVLVD_Project
         {
             PersnID= ctrlPersonCardWithFilter1.PersonID;
 
-            if(PersnID == -1)
+            string FullName= ctrlPersonCardWithFilter1.SelectedPersonInfo.FullName;
+ 
+            if (PersnID == -1)
             {
                 MessageBox.Show("Please select a person first.", "Select a Person", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -57,6 +61,8 @@ namespace DVLVD_Project
             {
 
               tcAddUpdateUser.SelectedIndex = 1;
+
+                lblDataUser.Text = "Name: " + FullName + "\nID: " + PersnID;
 
             }
             else
@@ -73,5 +79,28 @@ namespace DVLVD_Project
 
 
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if(ctrlPersonCardWithFilter1.SelectedPersonInfo==null)
+            {
+
+              MessageBox.Show(
+              "The Person Details is empty.",
+              "Error",
+              MessageBoxButtons.OK,
+              MessageBoxIcon.Error);
+               return;
+
+            }
+
+
+        }
+
     }
 }
