@@ -86,7 +86,7 @@ namespace DVLVD_Project
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(512, 15);
+            this.pictureBox1.Location = new System.Drawing.Point(432, 1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(65, 65);
             this.pictureBox1.TabIndex = 26;
@@ -98,7 +98,7 @@ namespace DVLVD_Project
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
-            this.label1.Location = new System.Drawing.Point(428, 83);
+            this.label1.Location = new System.Drawing.Point(353, 69);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(236, 37);
             this.label1.TabIndex = 27;

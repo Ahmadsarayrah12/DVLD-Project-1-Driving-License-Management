@@ -4,6 +4,7 @@ using System.Data;
 using System.Windows.Forms;
 using LibraryProject.BussinessLogic;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace DVLVD_Project
 {
@@ -20,6 +21,52 @@ namespace DVLVD_Project
         private bool _IsSaved = false;
 
                
+        private bool _HandlePersonImage()
+        {
+
+            if (_Person.ImagePath != pbPersonImage.ImageLocation)
+            {
+
+                if (_Person.ImagePath != "")
+                {
+
+                    try
+                    {
+                        File.Delete(_Person.ImagePath);
+
+                    }
+                    catch (IOException)
+                    {
+
+                    }
+
+                }
+
+
+
+
+                if (pbPersonImage.ImageLocation != null)
+                {
+
+                    string SourceImageFile = pbPersonImage.ImageLocation.ToString();
+
+                    if (clsUtil.CopyImageToProjectImageFolder(ref SourceImageFile))
+                    {
+
+                        pbPersonImage.ImageLocation = SourceImageFile;
+                        return true;
+                    }
+
+                    else
+                    {
+                        MessageBox.Show("Error Copying Image File", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return false;
+                    }
+                }
+            }
+            return true;
+       
+        }
         
         private void Input_Changed(object sender, EventArgs e)
         {
@@ -298,6 +345,9 @@ namespace DVLVD_Project
                 return;
             }
 
+            if (!_HandlePersonImage())
+                return;
+
             _Person.NationalNo = tbNationalNumber.Text.Trim();
             _Person.FirstName = tbFirstName.Text.Trim();
             _Person.SecondName = tbSecondName.Text.Trim();
@@ -394,6 +444,11 @@ namespace DVLVD_Project
             {
                 errorProvider1.SetError(dtpDateOfBirth, null);
             }
+        }
+
+        private void pbPersonImage_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -241,8 +241,6 @@ namespace DVLVD_Project
         private void phoneCallToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             MessageBox.Show("(Coming Soon!)", "Coming Soon", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        
-    
         }
     }
 }

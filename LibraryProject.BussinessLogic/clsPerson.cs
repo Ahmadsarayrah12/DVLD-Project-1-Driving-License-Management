@@ -31,7 +31,7 @@ namespace LibraryProject.BussinessLogic
         public int NationalityCountryID { get; set; }
         public string ImagePath { get; set; }
 
-   
+   // When Mode = Update We Use constractor with variabls;
         public clsPerson(int personID, string nationalNo, string firstName, string secondName,
                          string thirdName, string lastName, DateTime dateOfBirth, enGender gender,
                          string address, string phone, string email, int nationalityCountryID, string imagePath)
@@ -47,7 +47,7 @@ namespace LibraryProject.BussinessLogic
             this.Address = address;
             this.Phone = phone;
             this.Email = email;
-            this.NationalityCountryID = nationalityCountryID;
+            this.NationalityCountryID = nationalityCountryID; //Country
             this.ImagePath = imagePath;
 
             Mode = enMode.Update;
@@ -81,7 +81,7 @@ namespace LibraryProject.BussinessLogic
                 NationalityCountryID, ImagePath
             );
 
-            return (this.PersonID != -1);
+            return (this.PersonID > -1);
         }
 
         private bool _UpdatePerson()

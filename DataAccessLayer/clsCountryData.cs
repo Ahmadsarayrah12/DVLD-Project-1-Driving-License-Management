@@ -33,5 +33,30 @@ namespace DataAccessLayer
             }
             return dt;
         }
+
+        //public static bool Find(int CountryID )
+        //{
+
+        //    bool isFind = false;
+
+
+        //    using (SqlConnection conniction = new SqlConnection(clsDataAccessSettings.ConnectionString))
+        //    {
+
+           
+        //        string Query = @"SELECT [CountryID]
+        //                    ,[CountryName]
+        //                     FROM [dbo].[Countries]
+        //                     where CountryID = @CountryID";
+
+
+
+
+
+        //    }
+
+        //}
+
+
     }
 }

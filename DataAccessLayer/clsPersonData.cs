@@ -63,7 +63,18 @@ namespace DataAccessLayer
                     command.Parameters.AddWithValue("@Gender", Gender);
                     command.Parameters.AddWithValue("@Address", Address);
                     command.Parameters.AddWithValue("@Phone", Phone);
-                    command.Parameters.AddWithValue("@Email", Email);
+
+                    
+                    if (string.IsNullOrWhiteSpace(Email))
+                    {
+                        command.Parameters.AddWithValue("@Email", DBNull.Value);
+                    }
+                    else
+                    {
+                        command.Parameters.AddWithValue("@Email", Email);
+                    }
+
+
                     command.Parameters.AddWithValue("@NationalityCountryID", NationalityCountryID);
                     if (string.IsNullOrEmpty(ImagePath))
                         command.Parameters.AddWithValue("@ImagePath", DBNull.Value);
