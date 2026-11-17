@@ -17,9 +17,11 @@ namespace DVLVD_Project
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUserInfo));
             this.label1 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.ctrlUserCard1 = new DVLVD_Project.UserControls.ctrlUserCard();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -29,7 +31,7 @@ namespace DVLVD_Project
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
             this.label1.Location = new System.Drawing.Point(340, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(203, 37);
+            this.label1.Size = new System.Drawing.Size(202, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "User Details";
             // 
@@ -57,12 +59,28 @@ namespace DVLVD_Project
             this.ctrlUserCard1.Size = new System.Drawing.Size(850, 400);
             this.ctrlUserCard1.TabIndex = 1;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(22)))), ((int)(((byte)(44)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(828, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(40, 40);
+            this.button1.TabIndex = 26;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+         
+            // 
             // frmUserInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(22)))), ((int)(((byte)(44)))));
             this.ClientSize = new System.Drawing.Size(880, 535);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.ctrlUserCard1);
             this.Controls.Add(this.label1);
@@ -83,5 +101,6 @@ namespace DVLVD_Project
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnClose;
         private DVLVD_Project.UserControls.ctrlUserCard ctrlUserCard1;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -161,29 +161,39 @@ namespace DVLVD_Project
  
         private void cbFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (cbFilter == null) return;
+
             if (cbFilter.Text == "Gender")
             {
-                txtFilter.Visible = false;
-                cbGender.Visible = true;
-                cbGender.Focus();
-                cbGender.SelectedIndex = 0;
+                if (txtFilter != null) txtFilter.Visible = false;
+                if (cbGender != null)
+                {
+                    cbGender.Visible = true;
+                    cbGender.Focus();
+                    if (cbGender.Items.Count > 0)
+                        cbGender.SelectedIndex = 0;
+                }
             }
             else
             {
-                cbGender.Visible = false;
-                txtFilter.Visible = (cbFilter.Text != "None");
+                if (cbGender != null) cbGender.Visible = false;
+                if (txtFilter != null)
+                {
+                    txtFilter.Visible = (cbFilter.Text != "None");
 
-                if (txtFilter.Visible)
-                {
-                    txtFilter.Text = "";
-                    txtFilter.Focus();
-                }
-                else
-                {
-                    if (_dtAllPeople != null)
+                    if (txtFilter.Visible)
                     {
-                        _dtAllPeople.DefaultView.RowFilter = "";
-                        LblPeopleCount.Text = dgvPeopleData.Rows.Count.ToString();
+                        txtFilter.Text = "";
+                        txtFilter.Focus();
+                    }
+                    else
+                    {
+                        if (_dtAllPeople != null)
+                        {
+                            _dtAllPeople.DefaultView.RowFilter = "";
+                            if (LblPeopleCount != null && dgvPeopleData != null)
+                                LblPeopleCount.Text = dgvPeopleData.Rows.Count.ToString();
+                        }
                     }
                 }
             }

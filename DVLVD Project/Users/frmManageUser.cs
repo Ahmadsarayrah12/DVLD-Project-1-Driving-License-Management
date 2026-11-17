@@ -58,6 +58,8 @@ namespace DVLVD_Project
 
         private void cbFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (cbFilter == null) return;
+
             txtFilter.Visible = (cbFilter.Text != "None");
 
             if (txtFilter.Visible)
@@ -65,10 +67,20 @@ namespace DVLVD_Project
                 txtFilter.Text = "";
                 txtFilter.Focus();
             }
+            else
+            {
+                txtFilter.Text = "";
+                if (_dtAllUsers != null)
+                {
+                    _dtAllUsers.DefaultView.RowFilter = "";
+                }
+            }
         }
 
         private void txtFilter_TextChanged(object sender, EventArgs e)
         {
+            if (_dtAllUsers == null) return;
+
             string FilterColumn = "";
 
             switch (cbFilter.Text)
