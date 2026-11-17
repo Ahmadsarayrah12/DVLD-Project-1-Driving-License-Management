@@ -42,9 +42,6 @@ namespace DVLVD_Project
 
                 }
 
-
-
-
                 if (pbPersonImage.ImageLocation != null)
                 {
 

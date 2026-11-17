@@ -39,6 +39,18 @@ namespace DVLVD_Project.UserControls
             _FillPersonInfo();
         }
 
+        public void LoadPersonInfo(string NationalNo)
+        {
+            _Person = clsPerson.Find(NationalNo);
+            if (_Person == null)
+            {
+                ResetPersonInfo();
+                MessageBox.Show("No Person with NationalNo = " + NationalNo, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            _FillPersonInfo();
+        }
+
 
 
         private void _LoadPersonImage()
@@ -109,6 +121,11 @@ namespace DVLVD_Project.UserControls
 
             // Refresh data after edit
             LoadPersonInfo(_PersonID);
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

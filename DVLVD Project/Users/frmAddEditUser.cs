@@ -62,7 +62,9 @@ namespace DVLVD_Project
         private void frmAddEditUser_Load(object sender, EventArgs e)
         {
             _LoadData();
+            ctrlPersonCardWithFilter1.OnPersonSelected += ctrlPersonCardWithFilter1_OnPersonSelected;
         }
+         
 
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -164,6 +166,29 @@ namespace DVLVD_Project
 
         private void ctrlPersonCardWithFilter1_Load(object sender, EventArgs e)
         {
+
         }
+
+        private void ctrlPersonCardWithFilter1_OnPersonSelected(int personID)
+        {
+            if (personID == -1)
+                return;
+
+            if (clsUser.IsUserExistForPersonID(personID))
+            {
+                MessageBox.Show("Selected Person already has a user, choose another one.", "Select another Person", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                btnFind.Enabled = false;
+                tcUserInfo.Enabled = false;
+            }
+            else
+            {
+                btnFind.Enabled = true;
+                tcUserInfo.Enabled = true;
+            }
+        }
+
+
+
+
     }
 }

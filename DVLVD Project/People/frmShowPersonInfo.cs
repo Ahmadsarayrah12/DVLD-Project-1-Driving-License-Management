@@ -12,6 +12,13 @@ namespace DVLVD_Project
             ctrlPersonCard1.LoadPersonInfo(PersonID);
         }
 
+        public frmShowPersonInfo(string NationalNo)
+        {
+            InitializeComponent();
+            clsModernUI.ApplyModernTitleBar(this);
+            ctrlPersonCard1.LoadPersonInfo(NationalNo);
+        }
+
         private void btnAddPerson_Click(object sender, EventArgs e)
         {
             this.Close();

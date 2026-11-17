@@ -86,11 +86,8 @@ namespace DVLVD_Project.UserControls
                 }
             }
 
-         
-            if (OnPersonSelected != null && ctrlPersonCard1.PersonID != -1)
-            {
-                OnPersonSelected(ctrlPersonCard1.PersonID);
-            }
+
+            OnPersonSelected?.Invoke(ctrlPersonCard1.PersonID);
         }
 
        
@@ -112,6 +109,15 @@ namespace DVLVD_Project.UserControls
                 ctrlPersonCard1.LoadPersonInfo(frm._PersonID);
             }
         }
+
+
+        public void loadDataPerson()
+        {
+
+
+             
+
+        } 
 
     }
 

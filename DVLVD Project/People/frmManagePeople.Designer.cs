@@ -46,6 +46,7 @@
             this.LblPeopleCount = new System.Windows.Forms.Label();
             this.cbFilter = new System.Windows.Forms.ComboBox();
             this.txtFilter = new System.Windows.Forms.TextBox();
+            this.cbGender = new System.Windows.Forms.ComboBox();
             this.lblFilterBy = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnAddPerson = new System.Windows.Forms.Button();
@@ -102,6 +103,7 @@
             this.dgvPeopleData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPeopleData.Size = new System.Drawing.Size(1371, 375);
             this.dgvPeopleData.TabIndex = 1;
+            this.dgvPeopleData.DoubleClick += new System.EventHandler(this.dgvPeopleData_DoubleClick);
             // 
             // contextMenuStrip1
             // 
@@ -222,6 +224,22 @@
             this.txtFilter.Visible = false;
             this.txtFilter.TextChanged += new System.EventHandler(this.txtFilter_TextChanged);
             // 
+            // cbGender
+            // 
+            this.cbGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbGender.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbGender.FormattingEnabled = true;
+            this.cbGender.Items.AddRange(new object[] {
+            "All",
+            "Male",
+            "Female"});
+            this.cbGender.Location = new System.Drawing.Point(452, 142);
+            this.cbGender.Name = "cbGender";
+            this.cbGender.Size = new System.Drawing.Size(140, 25);
+            this.cbGender.TabIndex = 10;
+            this.cbGender.Visible = false;
+            this.cbGender.SelectedIndexChanged += new System.EventHandler(this.cbGender_SelectedIndexChanged);
+            // 
             // lblFilterBy
             // 
             this.lblFilterBy.AutoSize = true;
@@ -277,6 +295,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(22)))), ((int)(((byte)(44)))));
             this.ClientSize = new System.Drawing.Size(1440, 630);
             this.Controls.Add(this.button1);
+            this.Controls.Add(this.cbGender);
             this.Controls.Add(this.txtFilter);
             this.Controls.Add(this.lblFilterBy);
             this.Controls.Add(this.cbFilter);
@@ -313,6 +332,7 @@
         private System.Windows.Forms.ComboBox cbFilter;
         private System.Windows.Forms.Label lblFilterBy;
         private System.Windows.Forms.TextBox txtFilter;
+        private System.Windows.Forms.ComboBox cbGender;
 private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem showDetailsToolStripMenuItem;

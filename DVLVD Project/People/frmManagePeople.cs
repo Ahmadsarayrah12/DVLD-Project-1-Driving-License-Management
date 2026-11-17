@@ -140,11 +140,12 @@ namespace DVLVD_Project
 
         private void frmManagePeople_Load(object sender, EventArgs e)
         {
+            _RefreshPeopleList();
+
             cbFilter.Items.Clear();
             cbFilter.Items.AddRange(new string [] { "None", "Person ID", "National No.", "Full Name", "Nationality", "Gender", "Phone", "Email" });
             if (cbFilter.Items.Count > 0)
                 cbFilter.SelectedIndex = 0;
-            _RefreshPeopleList();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -161,19 +162,67 @@ namespace DVLVD_Project
  
         private void cbFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-            txtFilter.Visible = (cbFilter.Text != "None");
-
-            if (txtFilter.Visible)
+            if (cbFilter.Text == "Gender")
             {
-                txtFilter.Text = "";
-                txtFilter.Focus();
+                txtFilter.Visible = false;
+                cbGender.Visible = true;
+                cbGender.Focus();
+                cbGender.SelectedIndex = 0;
+            }
+            else
+            {
+                cbGender.Visible = false;
+                txtFilter.Visible = (cbFilter.Text != "None");
+
+                if (txtFilter.Visible)
+                {
+                    txtFilter.Text = "";
+                    txtFilter.Focus();
+                }
+                else
+                {
+                    if (_dtAllPeople != null)
+                    {
+                        _dtAllPeople.DefaultView.RowFilter = "";
+                        LblPeopleCount.Text = dgvPeopleData.Rows.Count.ToString();
+                    }
+                }
+            }
+        }
+
+        private void cbGender_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (_dtAllPeople == null) return;
+
+            string selectedGender = cbGender.Text;
+
+            if (selectedGender == "All")
+            {
+                _dtAllPeople.DefaultView.RowFilter = "";
+            }
+            else
+            {
+                _dtAllPeople.DefaultView.RowFilter = string.Format("[GenderText] = '{0}'", selectedGender);
             }
 
+            LblPeopleCount.Text = dgvPeopleData.Rows.Count.ToString();
+        }
+
+        private void dgvPeopleData_DoubleClick(object sender, EventArgs e)
+        {
+            if (dgvPeopleData.CurrentRow != null)
+            {
+                int personID = (int)dgvPeopleData.CurrentRow.Cells["PersonID"].Value;
+                frmShowPersonInfo frm = new frmShowPersonInfo(personID);
+                frm.ShowDialog();
+                _RefreshPeopleList();
+            }
         }
 
         private void txtFilter_TextChanged(object sender, EventArgs e)
         {
+            if (_dtAllPeople == null) return;
+
             string FilterColumn = "";
             switch (cbFilter.Text)
             {
