@@ -18,16 +18,21 @@ namespace DVLVD_Project
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEditApplicationType));
             this.lblHeader = new System.Windows.Forms.Label();
             this.lblIDLabel = new System.Windows.Forms.Label();
             this.lblApplicationTypeID = new System.Windows.Forms.Label();
             this.lblTitleLabel = new System.Windows.Forms.Label();
+            this.pbTitle = new System.Windows.Forms.PictureBox();
             this.txtTitle = new System.Windows.Forms.TextBox();
             this.lblFeesLabel = new System.Windows.Forms.Label();
+            this.pbFees = new System.Windows.Forms.PictureBox();
             this.txtFees = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.pbTitle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFees)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +64,7 @@ namespace DVLVD_Project
             this.lblApplicationTypeID.AutoSize = true;
             this.lblApplicationTypeID.Font = new System.Drawing.Font("Segoe UI", 10.5F, System.Drawing.FontStyle.Bold);
             this.lblApplicationTypeID.ForeColor = System.Drawing.Color.White;
-            this.lblApplicationTypeID.Location = new System.Drawing.Point(100, 95);
+            this.lblApplicationTypeID.Location = new System.Drawing.Point(130, 95);
             this.lblApplicationTypeID.Name = "lblApplicationTypeID";
             this.lblApplicationTypeID.Size = new System.Drawing.Size(33, 19);
             this.lblApplicationTypeID.TabIndex = 2;
@@ -76,15 +81,26 @@ namespace DVLVD_Project
             this.lblTitleLabel.TabIndex = 3;
             this.lblTitleLabel.Text = "Title:";
             // 
+            // pbTitle
+            // 
+            this.pbTitle.BackColor = System.Drawing.Color.Transparent;
+            this.pbTitle.Image = ((System.Drawing.Image)(resources.GetObject("pbTitle.Image")));
+            this.pbTitle.Location = new System.Drawing.Point(95, 138);
+            this.pbTitle.Name = "pbTitle";
+            this.pbTitle.Size = new System.Drawing.Size(24, 24);
+            this.pbTitle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbTitle.TabIndex = 9;
+            this.pbTitle.TabStop = false;
+            // 
             // txtTitle
             // 
             this.txtTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(35)))), ((int)(((byte)(65)))));
             this.txtTitle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTitle.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtTitle.ForeColor = System.Drawing.Color.White;
-            this.txtTitle.Location = new System.Drawing.Point(100, 138);
+            this.txtTitle.Location = new System.Drawing.Point(130, 138);
             this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(340, 25);
+            this.txtTitle.Size = new System.Drawing.Size(310, 25);
             this.txtTitle.TabIndex = 4;
             this.txtTitle.Validating += new System.ComponentModel.CancelEventHandler(this.txtTitle_Validating);
             // 
@@ -99,15 +115,26 @@ namespace DVLVD_Project
             this.lblFeesLabel.TabIndex = 5;
             this.lblFeesLabel.Text = "Fees:";
             // 
+            // pbFees
+            // 
+            this.pbFees.BackColor = System.Drawing.Color.Transparent;
+            this.pbFees.Image = ((System.Drawing.Image)(resources.GetObject("pbFees.Image")));
+            this.pbFees.Location = new System.Drawing.Point(95, 183);
+            this.pbFees.Name = "pbFees";
+            this.pbFees.Size = new System.Drawing.Size(24, 24);
+            this.pbFees.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbFees.TabIndex = 10;
+            this.pbFees.TabStop = false;
+            // 
             // txtFees
             // 
             this.txtFees.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(35)))), ((int)(((byte)(65)))));
             this.txtFees.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFees.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtFees.ForeColor = System.Drawing.Color.White;
-            this.txtFees.Location = new System.Drawing.Point(100, 183);
+            this.txtFees.Location = new System.Drawing.Point(130, 183);
             this.txtFees.Name = "txtFees";
-            this.txtFees.Size = new System.Drawing.Size(340, 25);
+            this.txtFees.Size = new System.Drawing.Size(310, 25);
             this.txtFees.TabIndex = 6;
             this.txtFees.Validating += new System.ComponentModel.CancelEventHandler(this.txtFees_Validating);
             // 
@@ -119,11 +146,14 @@ namespace DVLVD_Project
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
             this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
-            this.btnSave.Location = new System.Drawing.Point(335, 235);
+            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.Location = new System.Drawing.Point(325, 235);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(105, 34);
+            this.btnSave.Size = new System.Drawing.Size(115, 36);
             this.btnSave.TabIndex = 7;
-            this.btnSave.Text = "Save";
+            this.btnSave.Text = "   Save";
+            this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -135,11 +165,14 @@ namespace DVLVD_Project
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(220, 235);
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.Location = new System.Drawing.Point(200, 235);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(105, 34);
+            this.btnClose.Size = new System.Drawing.Size(115, 36);
             this.btnClose.TabIndex = 8;
-            this.btnClose.Text = "Close";
+            this.btnClose.Text = "   Close";
+            this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -153,6 +186,8 @@ namespace DVLVD_Project
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(22)))), ((int)(((byte)(44)))));
             this.ClientSize = new System.Drawing.Size(480, 295);
+            this.Controls.Add(this.pbFees);
+            this.Controls.Add(this.pbTitle);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtFees);
@@ -169,6 +204,8 @@ namespace DVLVD_Project
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Update Application Type";
             this.Load += new System.EventHandler(this.frmEditApplicationType_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbTitle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFees)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -186,5 +223,7 @@ namespace DVLVD_Project
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.PictureBox pbTitle;
+        private System.Windows.Forms.PictureBox pbFees;
     }
 }
