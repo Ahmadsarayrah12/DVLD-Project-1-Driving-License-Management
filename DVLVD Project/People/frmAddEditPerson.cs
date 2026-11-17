@@ -274,9 +274,7 @@ namespace DVLVD_Project
             }
 
 
-            string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
-
-            if (!System.Text.RegularExpressions.Regex.IsMatch(email, pattern))
+            if (!clsValidatoin.ValidateEmail(email))
             {
                 e.Cancel = true;
                 System.Media.SystemSounds.Beep.Play();

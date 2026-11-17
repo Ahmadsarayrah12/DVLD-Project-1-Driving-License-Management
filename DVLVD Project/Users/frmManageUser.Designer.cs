@@ -179,6 +179,7 @@ namespace DVLVD_Project
             this.dgvPeopleData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPeopleData.Size = new System.Drawing.Size(824, 375);
             this.dgvPeopleData.TabIndex = 31;
+            this.dgvPeopleData.DoubleClick += new System.EventHandler(this.dgvPeopleData_DoubleClick);
             // 
             // contextMenuStrip1
             // 

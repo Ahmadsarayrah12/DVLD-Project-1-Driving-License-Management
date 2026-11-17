@@ -133,6 +133,17 @@ namespace DVLVD_Project
             _RefreshUsersList();
         }
 
+        private void dgvPeopleData_DoubleClick(object sender, EventArgs e)
+        {
+            if (dgvPeopleData.CurrentRow != null)
+            {
+                int userID = (int)dgvPeopleData.CurrentRow.Cells["UserID"].Value;
+                frmUserInfo frm = new frmUserInfo(userID);
+                frm.ShowDialog();
+                _RefreshUsersList();
+            }
+        }
+
         private void TsmiDetails_Click(object sender, EventArgs e)
         {
             if (dgvPeopleData.CurrentRow != null)
