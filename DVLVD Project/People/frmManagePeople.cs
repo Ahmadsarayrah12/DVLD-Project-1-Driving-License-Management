@@ -33,15 +33,20 @@ namespace DVLVD_Project
 
         private void _PrepareDataTableColumns()
         {
-
-
-            if (_dtAllPeople == null) return;
+            if (_dtAllPeople == null || _dtAllPeople.Columns.Count == 0) return;
 
             if (!_dtAllPeople.Columns.Contains("FullName"))
                 _dtAllPeople.Columns.Add("FullName", typeof(string), "FirstName + ' ' + SecondName + ' ' + ISNULL(ThirdName, '') + ' ' + LastName");
 
             if (!_dtAllPeople.Columns.Contains("GenderText"))
-                _dtAllPeople.Columns.Add("GenderText", typeof(string), "IIF(Gender=0, 'Male', 'Female')");
+            {
+                if (_dtAllPeople.Columns.Contains("GenderCaption"))
+                    _dtAllPeople.Columns.Add("GenderText", typeof(string), "GenderCaption");
+                else if (_dtAllPeople.Columns.Contains("Gender"))
+                    _dtAllPeople.Columns.Add("GenderText", typeof(string), "IIF(Gender=0, 'Male', 'Female')");
+                else if (_dtAllPeople.Columns.Contains("Gendor"))
+                    _dtAllPeople.Columns.Add("GenderText", typeof(string), "IIF(Gendor=0, 'Male', 'Female')");
+            }
         }
 
  

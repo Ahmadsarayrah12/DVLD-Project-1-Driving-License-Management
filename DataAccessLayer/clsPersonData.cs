@@ -25,7 +25,7 @@ namespace DataAccessLayer
                                 ,[ThirdName]
                                 ,[LastName]
                                 ,[DateOfBirth]
-                                ,[Gender]
+                                ,[Gendor]
                                 ,[Address]
                                 ,[Phone]
                                 ,[Email]
@@ -136,7 +136,7 @@ namespace DataAccessLayer
                                 ThirdName = reader["ThirdName"] != DBNull.Value ? (string)reader["ThirdName"] : "";
                                 LastName = (string)reader["LastName"];
                                 DateOfBirth = (DateTime)reader["DateOfBirth"];
-                                Gender = (byte)reader["Gender"];
+                                Gender = reader["Gendor"] != DBNull.Value ? Convert.ToByte(reader["Gendor"]) : (reader["Gender"] != DBNull.Value ? Convert.ToByte(reader["Gender"]) : (byte)0);
                                 Address = (string)reader["Address"];
                                 Phone = (string)reader["Phone"];
                                 Email = reader["Email"] != DBNull.Value ? (string)reader["Email"] : "";
@@ -163,7 +163,7 @@ namespace DataAccessLayer
                                     ,[ThirdName] = @ThirdName
                                     ,[LastName] = @LastName
                                     ,[DateOfBirth] = @DateOfBirth
-                                    ,[Gender] = @Gender
+                                    ,[Gendor] = @Gender
                                     ,[Address] = @Address
                                     ,[Phone] = @Phone
                                     ,[Email] = @Email
@@ -211,7 +211,15 @@ namespace DataAccessLayer
             {
                 using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
                 {
-                    string query = @"SELECT Countries.*, People.*
+                    string query = @"SELECT People.PersonID, People.NationalNo,
+                                            People.FirstName, People.SecondName, People.ThirdName, People.LastName,
+                                            People.DateOfBirth, People.Gendor, People.Gendor as Gender,
+                                            CASE
+                                                WHEN People.Gendor = 0 THEN 'Male'
+                                                ELSE 'Female'
+                                            END as GenderCaption,
+                                            People.Address, People.Phone, People.Email,
+                                            People.NationalityCountryID, Countries.CountryName, People.ImagePath
                                      FROM People 
                                      INNER JOIN Countries ON People.NationalityCountryID = Countries.CountryID
                                      ORDER BY People.PersonID DESC";
@@ -274,7 +282,7 @@ namespace DataAccessLayer
                                 ThirdName = reader["ThirdName"] != DBNull.Value ? (string)reader["ThirdName"] : "";
                                 LastName = (string)reader["LastName"];
                                 DateOfBirth = (DateTime)reader["DateOfBirth"];
-                                Gender = (byte)reader["Gender"];
+                                Gender = reader["Gendor"] != DBNull.Value ? Convert.ToByte(reader["Gendor"]) : (reader["Gender"] != DBNull.Value ? Convert.ToByte(reader["Gender"]) : (byte)0);
                                 Address = (string)reader["Address"];
                                 Phone = (string)reader["Phone"];
                                 Email = reader["Email"] != DBNull.Value ? (string)reader["Email"] : "";
