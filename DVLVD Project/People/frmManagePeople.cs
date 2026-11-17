@@ -19,9 +19,8 @@ namespace DVLVD_Project
         {
             _dtAllPeople = clsPerson.GetAllPeople();
 
-            //الاعمدة المحسوبة
+            // Computed columns
             _PrepareDataTableColumns();
-            // تعبئة الجدول بالبيانات بواسطة DataSource
             dgvPeopleData.DataSource = _dtAllPeople;
 
 

@@ -53,7 +53,7 @@ namespace LibraryProject.BussinessLogic
             Mode = enMode.Update;
         }
 
-        // Constructor للـ AddNew
+        // AddNew constructor
         public clsPerson()
         {
             this.PersonID = -1;

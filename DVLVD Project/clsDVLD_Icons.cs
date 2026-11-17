@@ -1,37 +1,22 @@
-using System;
+﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
 
 namespace DVLD.Classes
 {
-    /// <summary>
-    /// كلاس مساعد C# لإدارة وعرض أيقونات وصور مشروع DVLD في بيئة Windows Forms.
-    /// تم تصميمه ليتوافق تماماً مع متطلبات دورة ProgrammingAdvices لنظام رخص القيادة.
-    /// </summary>
+    // Helper class for DVLD UI icons
     public static class clsDVLD_Icons
     {
-        // =============================================================
-        // 1. صور الأشخاص الافتراضية (Default Person Photo)
-        // =============================================================
-        /// <summary>
-        /// يرجع صورة الشخص الافتراضية (ذكر / أنثى) في حال عدم توفر صورة شخصية في قاعدة البيانات.
-        /// يتم استدعاؤها في شاشة Add/Edit Person و ctrlPersonCard.
-        /// </summary>
-        /// <param name="isMale">true إذا كان المتقدم ذكراً، false إذا كانت أنثى</param>
+        // Default person images
         public static Image GetDefaultPersonImage(bool isMale)
         {
             return isMale ? Properties.Resources.Male_Photo_Placeholder 
                           : Properties.Resources.Female_Photo_Placeholder;
         }
 
-        // =============================================================
-        // 2. صور أنواع الاختبارات الثلاثة (Test Types: Vision, Written, Street)
-        // =============================================================
+        // Test types
         public enum enTestType { VisionTest = 1, WrittenTest = 2, StreetTest = 3 }
 
-        /// <summary>
-        /// يرجع الأيقونة المناسبة لنوع الاختبار (1: فحص النظر، 2: الفحص النظري، 3: فحص القيادة العملي).
-        /// </summary>
         public static Image GetTestTypeImage(enTestType testType)
         {
             switch (testType)
@@ -41,9 +26,9 @@ namespace DVLD.Classes
                 case enTestType.WrittenTest:
                     return Properties.Resources.Written_Test;
                 case enTestType.StreetTest:
-                    return Properties.Resources.Practical_Test;
+                    return Properties.Resources.Street_Test;
                 default:
-                    return Properties.Resources.Vision_Test;
+                    return null;
             }
         }
 
@@ -52,50 +37,35 @@ namespace DVLD.Classes
             return GetTestTypeImage((enTestType)testTypeID);
         }
 
-        // =============================================================
-        // 3. صور نتائج الاختبارات (Test Results: Passed / Failed)
-        // =============================================================
-        /// <summary>
-        /// يرجع أيقونة نتيجة الاختبار (ناجح / راسب).
-        /// </summary>
+        // Test results
         public static Image GetTestResultImage(bool isPassed)
         {
-            return isPassed ? Properties.Resources.Test_Passed 
-                            : Properties.Resources.Test_Failed;
+            return isPassed ? Properties.Resources.Test_Passed_Badge 
+                            : Properties.Resources.Test_Failed_Badge;
         }
 
-        // =============================================================
-        // 4. صور حالات الرخص (Active, Detained, Released)
-        // =============================================================
-        /// <summary>
-        /// يرجع أيقونة الرخصة حسب حالتها (محجوزة / عادية).
-        /// </summary>
+        // License status
         public static Image GetLicenseImage(bool isDetained)
         {
-            return isDetained ? Properties.Resources.Detained_License 
-                              : Properties.Resources.License_Card;
+            return isDetained ? Properties.Resources.License_Detained 
+                              : Properties.Resources.License_Active;
         }
 
-        // =============================================================
-        // 5. صور حالات الطلبات (Application Status: New, Cancelled, Completed)
-        // =============================================================
+        // Application status
         public enum enApplicationStatus { New = 1, Cancelled = 2, Completed = 3 }
 
-        /// <summary>
-        /// يرجع أيقونة حالة الطلب (1: جديد، 2: ملغى، 3: مكتمل ومعتمد).
-        /// </summary>
         public static Image GetApplicationStatusImage(enApplicationStatus status)
         {
             switch (status)
             {
                 case enApplicationStatus.New:
-                    return Properties.Resources.New_Application;
+                    return Properties.Resources.Application_New;
                 case enApplicationStatus.Cancelled:
-                    return Properties.Resources.Cancel_Application;
+                    return Properties.Resources.Application_Cancelled;
                 case enApplicationStatus.Completed:
-                    return Properties.Resources.Approve_Application;
+                    return Properties.Resources.Application_Completed;
                 default:
-                    return Properties.Resources.New_Application;
+                    return null;
             }
         }
 
@@ -104,75 +74,48 @@ namespace DVLD.Classes
             return GetApplicationStatusImage((enApplicationStatus)statusID);
         }
 
-        // =============================================================
-        // 6. ميزة إظهار / إخفاء كلمة المرور لشاشة تسجيل الدخول (frmLogin)
-        // =============================================================
-        /// <summary>
-        /// تبديل إظهار وإخفاء كلمة المرور في الـ TextBox مع تغيير أيقونة الزر تلقائياً.
-        /// </summary>
+        // Password visibility toggle
         public static void TogglePasswordVisibility(TextBox txtPassword, Button btnEye)
         {
-            if (txtPassword.PasswordChar == '\0')
+            if (txtPassword == null) return;
+
+            txtPassword.UseSystemPasswordChar = !txtPassword.UseSystemPasswordChar;
+
+            if (btnEye != null)
             {
-                txtPassword.PasswordChar = '*';
-                btnEye.Image = Properties.Resources.Show_Password;
+                btnEye.Image = txtPassword.UseSystemPasswordChar 
+                    ? Properties.Resources.Password_Show 
+                    : Properties.Resources.Password_Hide;
             }
-            else
-            {
-                txtPassword.PasswordChar = '\0';
-                btnEye.Image = Properties.Resources.Hide_Password;
-            }
-        // =============================================================
-        // 7. صور فئات رخص القيادة العشرة (License Classes 1 to 10)
-        // =============================================================
-        /// <summary>
-        /// يرجع أيقونة فئة الرخصة المناسبة حسب المعرف LicenseClassID (من الفئة 1 إلى 10).
-        /// </summary>
+        }
+
+        // License classes
         public static Image GetLicenseClassImage(int licenseClassID)
         {
             switch (licenseClassID)
             {
-                case 1:
-                    return Properties.Resources.License_Class_1_Small_Motorcycle;
-                case 2:
-                    return Properties.Resources.License_Class_2_Heavy_Motorcycle;
-                case 3:
-                    return Properties.Resources.License_Class_3_Ordinary_Car;
-                case 4:
-                    return Properties.Resources.License_Class_4_Commercial_Taxi;
-                case 5:
-                    return Properties.Resources.License_Class_5_Agricultural_Tractor;
-                case 6:
-                    return Properties.Resources.License_Class_6_Small_Medium_Bus;
-                case 7:
-                    return Properties.Resources.License_Class_7_Heavy_Truck;
-                case 8:
-                    return Properties.Resources.License_Class_8_International;
-                case 9:
-                    return Properties.Resources.License_Class_9_Special_Needs;
-                case 10:
-                    return Properties.Resources.License_Class_10_Temporary_Learner;
-                default:
-                    return Properties.Resources.License_Class_3_Ordinary_Car;
+                case 1: return Properties.Resources.Class1_Small_Motorcycle;
+                case 2: return Properties.Resources.Class2_Heavy_Motorcycle;
+                case 3: return Properties.Resources.Class3_Ordinary_Driving_License;
+                case 4: return Properties.Resources.Class4_Commercial;
+                case 5: return Properties.Resources.Class5_Agricultural;
+                case 6: return Properties.Resources.Class6_Small_Medium_Bus;
+                case 7: return Properties.Resources.Class7_Truck_Heavy_Vehicle;
+                case 8: return Properties.Resources.Class8_Custom_Placeholder;
+                case 9: return Properties.Resources.Class9_Custom_Placeholder;
+                case 10: return Properties.Resources.Class10_Custom_Placeholder;
+                default: return null;
             }
         }
 
-        // =============================================================
-        // 8. صور شريط القوائم الرئيسي (Main Navigation Icons)
-        // =============================================================
-        /// <summary>
-        /// أيقونة إدارة الأشخاص (People / Manage People) لشريط القوائم الرئيسي.
-        /// </summary>
+        // Main navigation icons
         public static Image People => Properties.Resources.People;
         public static Image ManagePeople => Properties.Resources.Manage_People;
         public static Image Drivers => Properties.Resources.Drivers;
         public static Image Users => Properties.Resources.Users;
         public static Image Applications => Properties.Resources.Applications;
 
-        // =============================================================
-        // 9. الأيقونات الذكية الإضافية (Extended 100 Smart-Sized Icons)
-        // تم تخمين أنسب حجم واجهة مستخدم لكل أيقونة (16px, 24px, 32px, 48px, 64px, 128px, 256px)
-        // =============================================================
+        // Context menu icons
         public static class ContextMenu
         {
             public static Image ShowDetails => Properties.Resources.CMS_Show_Details;
