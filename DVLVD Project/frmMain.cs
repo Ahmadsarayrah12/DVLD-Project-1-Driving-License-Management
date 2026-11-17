@@ -60,6 +60,16 @@ namespace DVLVD_Project
             this.Close();
         }
 
+        private void manageApplicationTypesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmManageApplicationTypes frm = new frmManageApplicationTypes();
+            frm.ShowDialog();
+        }
+
+        private void applicationsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
+
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
         }
