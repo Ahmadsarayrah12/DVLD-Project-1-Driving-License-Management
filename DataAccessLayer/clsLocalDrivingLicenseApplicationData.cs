@@ -358,5 +358,39 @@ namespace DataAccessLayer
 
             return result;
         }
+
+        public static bool IsLicenseExistByPersonID(int PersonID, int LicenseClassID)
+        {
+            bool result = false;
+
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                string query = @"SELECT TOP 1 Found = 1 
+                                FROM Licenses 
+                                INNER JOIN Drivers ON Licenses.DriverID = Drivers.DriverID
+                                WHERE Drivers.PersonID = @PersonID 
+                                  AND Licenses.LicenseClass = @LicenseClassID 
+                                  AND Licenses.IsActive = 1";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@PersonID", PersonID);
+                    command.Parameters.AddWithValue("@LicenseClassID", LicenseClassID);
+
+                    try
+                    {
+                        connection.Open();
+                        object scalar = command.ExecuteScalar();
+                        result = (scalar != null);
+                    }
+                    catch
+                    {
+                        result = false;
+                    }
+                }
+            }
+
+            return result;
+        }
     }
 }

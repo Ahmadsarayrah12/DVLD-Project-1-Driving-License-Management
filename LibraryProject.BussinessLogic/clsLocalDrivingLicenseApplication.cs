@@ -202,5 +202,10 @@ namespace LibraryProject.BussinessLogic
             return clsLocalDrivingLicenseApplicationData.IsThereAnActiveScheduledTest(
                 this.LocalDrivingLicenseApplicationID, (int)TestTypeID);
         }
+
+        public static bool IsLicenseExistByPersonID(int PersonID, int LicenseClassID)
+        {
+            return clsLocalDrivingLicenseApplicationData.IsLicenseExistByPersonID(PersonID, LicenseClassID);
+        }
     }
 }
