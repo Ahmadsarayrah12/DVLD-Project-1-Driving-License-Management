@@ -72,6 +72,38 @@ namespace DVLVD_Project
             frm.ShowDialog();
         }
 
+        private void localLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form openForm in Application.OpenForms)
+            {
+                if (openForm is frmAddUpdateLocalDrivingLicesnseApplication)
+                {
+                    openForm.BringToFront();
+                    openForm.Activate();
+                    return;
+                }
+            }
+
+            frmAddUpdateLocalDrivingLicesnseApplication frm = new frmAddUpdateLocalDrivingLicesnseApplication();
+            frm.ShowDialog();
+        }
+
+        private void localDrivingLicenseApplicationsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form openForm in Application.OpenForms)
+            {
+                if (openForm is frmListLocalDrivingLicesnseApplications)
+                {
+                    openForm.BringToFront();
+                    openForm.Activate();
+                    return;
+                }
+            }
+
+            frmListLocalDrivingLicesnseApplications frm = new frmListLocalDrivingLicesnseApplications();
+            frm.ShowDialog();
+        }
+
         private void applicationsToolStripMenuItem_Click(object sender, EventArgs e)
         {
         }

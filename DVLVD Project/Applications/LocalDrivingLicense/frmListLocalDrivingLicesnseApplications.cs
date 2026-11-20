@@ -151,6 +151,16 @@ namespace DVLVD_Project
 
         private void btnAddNewApplication_Click(object sender, EventArgs e)
         {
+            foreach (Form openForm in Application.OpenForms)
+            {
+                if (openForm is frmAddUpdateLocalDrivingLicesnseApplication)
+                {
+                    openForm.BringToFront();
+                    openForm.Activate();
+                    return;
+                }
+            }
+
             frmAddUpdateLocalDrivingLicesnseApplication frm = new frmAddUpdateLocalDrivingLicesnseApplication();
             frm.ShowDialog();
             _RefreshLocalDrivingLicenseApplicationsList();
