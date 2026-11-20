@@ -34,6 +34,11 @@ namespace DVLVD_Project.UserControls
             set { gbFilter.Enabled = value; }
         }
 
+        public void FilterFocus()
+        {
+            txtFilterValue.Focus();
+        }
+
         public void LoadPersonInfo(int personID)
         {
             cbFilterBy.SelectedIndex = 0;
