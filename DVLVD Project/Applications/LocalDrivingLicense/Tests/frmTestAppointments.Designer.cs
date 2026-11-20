@@ -25,6 +25,7 @@ namespace DVLVD_Project
             this.pnlAppInfo = new System.Windows.Forms.Panel();
             this.lblDLAppIDLabel = new System.Windows.Forms.Label();
             this.lblDLAppIDValue = new System.Windows.Forms.Label();
+            this.lnkShowLicenseInfo = new System.Windows.Forms.LinkLabel();
             this.lblAppliedForLabel = new System.Windows.Forms.Label();
             this.pbLicense = new System.Windows.Forms.PictureBox();
             this.lblAppliedForValue = new System.Windows.Forms.Label();
@@ -106,6 +107,18 @@ namespace DVLVD_Project
             this.lblDLAppIDValue.Location = new System.Drawing.Point(10, 30);
             this.lblDLAppIDValue.Text = "D.L App ID:";
 
+            // lnkShowLicenseInfo
+            this.lnkShowLicenseInfo.AutoSize = true;
+            this.lnkShowLicenseInfo.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Underline);
+            this.lnkShowLicenseInfo.LinkColor = System.Drawing.Color.FromArgb(100, 160, 230);
+            this.lnkShowLicenseInfo.ActiveLinkColor = System.Drawing.Color.White;
+            this.lnkShowLicenseInfo.VisitedLinkColor = System.Drawing.Color.FromArgb(100, 160, 230);
+            this.lnkShowLicenseInfo.Location = new System.Drawing.Point(430, 30);
+            this.lnkShowLicenseInfo.Name = "lnkShowLicenseInfo";
+            this.lnkShowLicenseInfo.Text = "Show License Info";
+            this.lnkShowLicenseInfo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lnkShowLicenseInfo.Click += new System.EventHandler(this.lnkShowLicenseInfo_Click);
+
             this.lblAppliedForLabel.AutoSize = true;
             this.lblAppliedForLabel.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.lblAppliedForLabel.ForeColor = System.Drawing.Color.FromArgb(180, 180, 180);
@@ -146,6 +159,7 @@ namespace DVLVD_Project
 
             this.pnlAppInfo.Controls.Add(this.lblDLAppIDLabel);
             this.pnlAppInfo.Controls.Add(this.lblDLAppIDValue);
+            this.pnlAppInfo.Controls.Add(this.lnkShowLicenseInfo);
             this.pnlAppInfo.Controls.Add(this.lblAppliedForLabel);
             this.pnlAppInfo.Controls.Add(this.pbLicense);
             this.pnlAppInfo.Controls.Add(this.lblAppliedForValue);
@@ -321,6 +335,7 @@ namespace DVLVD_Project
         private System.Windows.Forms.Panel pnlAppInfo;
         private System.Windows.Forms.Label lblDLAppIDLabel;
         private System.Windows.Forms.Label lblDLAppIDValue;
+        private System.Windows.Forms.LinkLabel lnkShowLicenseInfo;
         private System.Windows.Forms.Label lblAppliedForLabel;
         private System.Windows.Forms.PictureBox pbLicense;
         private System.Windows.Forms.Label lblAppliedForValue;

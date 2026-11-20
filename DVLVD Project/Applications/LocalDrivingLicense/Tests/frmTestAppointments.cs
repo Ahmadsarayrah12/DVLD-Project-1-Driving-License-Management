@@ -166,6 +166,14 @@ namespace DVLVD_Project
             }
         }
 
+        private void lnkShowLicenseInfo_Click(object sender, EventArgs e)
+        {
+            // Opens the application detail form for this local driving license application
+            frmAddUpdateLocalDrivingLicesnseApplication frm =
+                new frmAddUpdateLocalDrivingLicesnseApplication(_LocalDrivingLicenseApplicationID);
+            frm.ShowDialog();
+        }
+
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();

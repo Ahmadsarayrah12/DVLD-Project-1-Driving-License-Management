@@ -77,6 +77,11 @@ namespace LibraryProject.BussinessLogic
             return (TestAppointmentID != -1);
         }
 
+        private bool _Update()
+        {
+            return clsTestAppointmentData.UpdateTestAppointment(TestAppointmentID, AppointmentDate);
+        }
+
         public bool Save()
         {
             switch (Mode)
@@ -88,6 +93,9 @@ namespace LibraryProject.BussinessLogic
                         return true;
                     }
                     return false;
+
+                case enMode.Update:
+                    return _Update();
             }
             return false;
         }

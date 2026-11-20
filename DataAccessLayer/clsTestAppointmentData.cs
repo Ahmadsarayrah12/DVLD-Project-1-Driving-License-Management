@@ -130,6 +130,34 @@ namespace DataAccessLayer
             return testAppointmentID;
         }
 
+        public static bool UpdateTestAppointment(int TestAppointmentID, DateTime AppointmentDate)
+        {
+            int rowsAffected = 0;
+
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                string query = "UPDATE TestAppointments SET AppointmentDate = @AppointmentDate WHERE TestAppointmentID = @TestAppointmentID";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@TestAppointmentID", TestAppointmentID);
+                    command.Parameters.AddWithValue("@AppointmentDate", AppointmentDate);
+
+                    try
+                    {
+                        connection.Open();
+                        rowsAffected = command.ExecuteNonQuery();
+                    }
+                    catch
+                    {
+                        return false;
+                    }
+                }
+            }
+
+            return (rowsAffected > 0);
+        }
+
         public static bool LockTestAppointment(int TestAppointmentID)
         {
             int rowsAffected = 0;
