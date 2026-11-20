@@ -10,6 +10,7 @@ namespace LibraryProject.BussinessLogic
         public enMode Mode = enMode.AddNew;
 
         public int LicenseClassID { get; set; }
+        public int ClassID => LicenseClassID;
         public string ClassName { get; set; }
         public string ClassDescription { get; set; }
         public byte MinimumAllowedAge { get; set; }
@@ -50,6 +51,11 @@ namespace LibraryProject.BussinessLogic
         {
             return clsLicenseClassData.UpdateLicenseClass(this.LicenseClassID, this.ClassName, this.ClassDescription,
                 this.MinimumAllowedAge, this.DefaultValidityLength, this.ClassFees);
+        }
+
+        public static clsLicenseClass FindByID(int LicenseClassID)
+        {
+            return Find(LicenseClassID);
         }
 
         public static clsLicenseClass Find(int LicenseClassID)

@@ -59,7 +59,7 @@ namespace DVLVD_Project
             this.lblHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
             this.lblHeader.Location = new System.Drawing.Point(180, 15);
             this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(564, 41);
+            this.lblHeader.Size = new System.Drawing.Size(556, 41);
             this.lblHeader.TabIndex = 0;
             this.lblHeader.Text = "New Local Driving License Application";
             // 
@@ -71,7 +71,7 @@ namespace DVLVD_Project
             this.tcApplicationInfo.Location = new System.Drawing.Point(20, 65);
             this.tcApplicationInfo.Name = "tcApplicationInfo";
             this.tcApplicationInfo.SelectedIndex = 0;
-            this.tcApplicationInfo.Size = new System.Drawing.Size(875, 445);
+            this.tcApplicationInfo.Size = new System.Drawing.Size(1177, 582);
             this.tcApplicationInfo.TabIndex = 1;
             // 
             // tpPersonalInfo
@@ -83,7 +83,7 @@ namespace DVLVD_Project
             this.tpPersonalInfo.Location = new System.Drawing.Point(4, 26);
             this.tpPersonalInfo.Name = "tpPersonalInfo";
             this.tpPersonalInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.tpPersonalInfo.Size = new System.Drawing.Size(867, 415);
+            this.tpPersonalInfo.Size = new System.Drawing.Size(1169, 552);
             this.tpPersonalInfo.TabIndex = 0;
             this.tpPersonalInfo.Text = "Personal Info";
             // 
@@ -97,7 +97,7 @@ namespace DVLVD_Project
             this.btnNext.ForeColor = System.Drawing.Color.White;
             this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
             this.btnNext.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNext.Location = new System.Drawing.Point(725, 365);
+            this.btnNext.Location = new System.Drawing.Point(920, 468);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(125, 36);
             this.btnNext.TabIndex = 1;
@@ -113,7 +113,7 @@ namespace DVLVD_Project
             this.ctrlPersonCardWithFilter1.FilterEnabled = true;
             this.ctrlPersonCardWithFilter1.Location = new System.Drawing.Point(10, 5);
             this.ctrlPersonCardWithFilter1.Name = "ctrlPersonCardWithFilter1";
-            this.ctrlPersonCardWithFilter1.Size = new System.Drawing.Size(850, 355);
+            this.ctrlPersonCardWithFilter1.Size = new System.Drawing.Size(1141, 525);
             this.ctrlPersonCardWithFilter1.TabIndex = 0;
             this.ctrlPersonCardWithFilter1.OnPersonSelected += new System.Action<int>(this.ctrlPersonCardWithFilter1_OnPersonSelected);
             // 
@@ -139,7 +139,7 @@ namespace DVLVD_Project
             this.tpApplicationInfo.Location = new System.Drawing.Point(4, 26);
             this.tpApplicationInfo.Name = "tpApplicationInfo";
             this.tpApplicationInfo.Padding = new System.Windows.Forms.Padding(3);
-            this.tpApplicationInfo.Size = new System.Drawing.Size(867, 415);
+            this.tpApplicationInfo.Size = new System.Drawing.Size(1169, 552);
             this.tpApplicationInfo.TabIndex = 1;
             this.tpApplicationInfo.Text = "Application Info.";
             // 
@@ -160,7 +160,7 @@ namespace DVLVD_Project
             this.pbCreatedBy.Image = ((System.Drawing.Image)(resources.GetObject("pbCreatedBy.Image")));
             this.pbCreatedBy.Location = new System.Drawing.Point(235, 258);
             this.pbCreatedBy.Name = "pbCreatedBy";
-            this.pbCreatedBy.Size = new System.Drawing.Size(24, 24);
+            this.pbCreatedBy.Size = new System.Drawing.Size(39, 33);
             this.pbCreatedBy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbCreatedBy.TabIndex = 13;
             this.pbCreatedBy.TabStop = false;
@@ -193,7 +193,7 @@ namespace DVLVD_Project
             this.pbAppFees.Image = ((System.Drawing.Image)(resources.GetObject("pbAppFees.Image")));
             this.pbAppFees.Location = new System.Drawing.Point(235, 203);
             this.pbAppFees.Name = "pbAppFees";
-            this.pbAppFees.Size = new System.Drawing.Size(24, 24);
+            this.pbAppFees.Size = new System.Drawing.Size(39, 33);
             this.pbAppFees.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbAppFees.TabIndex = 10;
             this.pbAppFees.TabStop = false;
@@ -205,7 +205,7 @@ namespace DVLVD_Project
             this.lblAppFeesTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
             this.lblAppFeesTitle.Location = new System.Drawing.Point(45, 205);
             this.lblAppFeesTitle.Name = "lblAppFeesTitle";
-            this.lblAppFeesTitle.Size = new System.Drawing.Size(126, 20);
+            this.lblAppFeesTitle.Size = new System.Drawing.Size(125, 20);
             this.lblAppFeesTitle.TabIndex = 9;
             this.lblAppFeesTitle.Text = "Application Fees:";
             // 
@@ -219,7 +219,7 @@ namespace DVLVD_Project
             this.cbLicenseClasses.FormattingEnabled = true;
             this.cbLicenseClasses.Location = new System.Drawing.Point(280, 150);
             this.cbLicenseClasses.Name = "cbLicenseClasses";
-            this.cbLicenseClasses.Size = new System.Drawing.Size(320, 25);
+            this.cbLicenseClasses.Size = new System.Drawing.Size(335, 25);
             this.cbLicenseClasses.TabIndex = 8;
             // 
             // pbLicenseClass
@@ -228,7 +228,7 @@ namespace DVLVD_Project
             this.pbLicenseClass.Image = ((System.Drawing.Image)(resources.GetObject("pbLicenseClass.Image")));
             this.pbLicenseClass.Location = new System.Drawing.Point(235, 150);
             this.pbLicenseClass.Name = "pbLicenseClass";
-            this.pbLicenseClass.Size = new System.Drawing.Size(24, 24);
+            this.pbLicenseClass.Size = new System.Drawing.Size(39, 33);
             this.pbLicenseClass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLicenseClass.TabIndex = 7;
             this.pbLicenseClass.TabStop = false;
@@ -240,7 +240,7 @@ namespace DVLVD_Project
             this.lblLicenseClassTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
             this.lblLicenseClassTitle.Location = new System.Drawing.Point(45, 150);
             this.lblLicenseClassTitle.Name = "lblLicenseClassTitle";
-            this.lblLicenseClassTitle.Size = new System.Drawing.Size(100, 20);
+            this.lblLicenseClassTitle.Size = new System.Drawing.Size(99, 20);
             this.lblLicenseClassTitle.TabIndex = 6;
             this.lblLicenseClassTitle.Text = "License Class:";
             // 
@@ -251,7 +251,7 @@ namespace DVLVD_Project
             this.lblApplicationDate.ForeColor = System.Drawing.Color.White;
             this.lblApplicationDate.Location = new System.Drawing.Point(280, 95);
             this.lblApplicationDate.Name = "lblApplicationDate";
-            this.lblApplicationDate.Size = new System.Drawing.Size(89, 20);
+            this.lblApplicationDate.Size = new System.Drawing.Size(95, 20);
             this.lblApplicationDate.TabIndex = 5;
             this.lblApplicationDate.Text = "10/09/2023";
             // 
@@ -261,7 +261,7 @@ namespace DVLVD_Project
             this.pbAppDate.Image = ((System.Drawing.Image)(resources.GetObject("pbAppDate.Image")));
             this.pbAppDate.Location = new System.Drawing.Point(235, 93);
             this.pbAppDate.Name = "pbAppDate";
-            this.pbAppDate.Size = new System.Drawing.Size(24, 24);
+            this.pbAppDate.Size = new System.Drawing.Size(39, 33);
             this.pbAppDate.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbAppDate.TabIndex = 4;
             this.pbAppDate.TabStop = false;
@@ -284,7 +284,7 @@ namespace DVLVD_Project
             this.lblLocalDrivingLicenseApplicationID.ForeColor = System.Drawing.Color.White;
             this.lblLocalDrivingLicenseApplicationID.Location = new System.Drawing.Point(280, 40);
             this.lblLocalDrivingLicenseApplicationID.Name = "lblLocalDrivingLicenseApplicationID";
-            this.lblLocalDrivingLicenseApplicationID.Size = new System.Drawing.Size(37, 20);
+            this.lblLocalDrivingLicenseApplicationID.Size = new System.Drawing.Size(42, 20);
             this.lblLocalDrivingLicenseApplicationID.TabIndex = 2;
             this.lblLocalDrivingLicenseApplicationID.Text = "[???]";
             // 
@@ -294,7 +294,7 @@ namespace DVLVD_Project
             this.pbDLAppID.Image = ((System.Drawing.Image)(resources.GetObject("pbDLAppID.Image")));
             this.pbDLAppID.Location = new System.Drawing.Point(235, 38);
             this.pbDLAppID.Name = "pbDLAppID";
-            this.pbDLAppID.Size = new System.Drawing.Size(24, 24);
+            this.pbDLAppID.Size = new System.Drawing.Size(39, 33);
             this.pbDLAppID.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbDLAppID.TabIndex = 1;
             this.pbDLAppID.TabStop = false;
@@ -306,7 +306,7 @@ namespace DVLVD_Project
             this.lblDLAppIDTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
             this.lblDLAppIDTitle.Location = new System.Drawing.Point(45, 40);
             this.lblDLAppIDTitle.Name = "lblDLAppIDTitle";
-            this.lblDLAppIDTitle.Size = new System.Drawing.Size(147, 20);
+            this.lblDLAppIDTitle.Size = new System.Drawing.Size(135, 20);
             this.lblDLAppIDTitle.TabIndex = 0;
             this.lblDLAppIDTitle.Text = "D.L.Application ID:";
             // 
@@ -320,7 +320,7 @@ namespace DVLVD_Project
             this.btnClose.ForeColor = System.Drawing.Color.White;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(620, 520);
+            this.btnClose.Location = new System.Drawing.Point(900, 674);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(125, 38);
             this.btnClose.TabIndex = 2;
@@ -339,7 +339,7 @@ namespace DVLVD_Project
             this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(175)))), ((int)(((byte)(55)))));
             this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(765, 520);
+            this.btnSave.Location = new System.Drawing.Point(1031, 674);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(125, 38);
             this.btnSave.TabIndex = 3;
@@ -353,7 +353,7 @@ namespace DVLVD_Project
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(22)))), ((int)(((byte)(44)))));
-            this.ClientSize = new System.Drawing.Size(915, 575);
+            this.ClientSize = new System.Drawing.Size(1235, 740);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.tcApplicationInfo);
@@ -376,6 +376,7 @@ namespace DVLVD_Project
             ((System.ComponentModel.ISupportInitialize)(this.pbDLAppID)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion

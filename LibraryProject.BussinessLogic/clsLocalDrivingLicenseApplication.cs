@@ -207,5 +207,20 @@ namespace LibraryProject.BussinessLogic
         {
             return clsLocalDrivingLicenseApplicationData.IsLicenseExistByPersonID(PersonID, LicenseClassID);
         }
+
+        public static byte TotalTrialsPerTest(int localDrivingLicenseApplicationID, int testTypeID)
+        {
+            return clsLocalDrivingLicenseApplicationData.TotalTrialsPerTest(localDrivingLicenseApplicationID, testTypeID);
+        }
+
+        public static bool IsThereAnActiveScheduledTest(int localDrivingLicenseApplicationID, int testTypeID)
+        {
+            return clsLocalDrivingLicenseApplicationData.IsThereAnActiveScheduledTest(localDrivingLicenseApplicationID, testTypeID);
+        }
+
+        public static bool DoesPassTestType(int localDrivingLicenseApplicationID, int testTypeID)
+        {
+            return clsLocalDrivingLicenseApplicationData.DoesPassTestType(localDrivingLicenseApplicationID, testTypeID);
+        }
     }
 }
