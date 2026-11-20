@@ -66,6 +66,12 @@ namespace DVLVD_Project
             frm.ShowDialog();
         }
 
+        private void manageTestTypesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmManageTestTypes frm = new frmManageTestTypes();
+            frm.ShowDialog();
+        }
+
         private void applicationsToolStripMenuItem_Click(object sender, EventArgs e)
         {
         }
